@@ -1,0 +1,70 @@
+::-webkit-scrollbar {
+  /* chrome based */
+  width: 0px; /* ширина scrollbar'a */
+  background: transparent; /* опционально */
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.box {
+  overflow: hidden;
+  min-height: 100%;
+}
+.ibg {
+  background-image: url("../../img/bryzgi-tsvetnye-foto.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+.main-screen {
+  flex: 1 1 100%;
+  position: relative;
+  &__bg {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+.header {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(99, 98, 98, 0.445);
+  perspective: 400px;
+  transform-style: preserve-3d;
+  svg {
+    width: 300px;
+    height: 200px;
+    transition: 1s ease-in-out 0s;
+    filter: drop-shadow(3px 3px 10px rgba(212, 211, 211, 0.877));
+    &:hover {
+      transform: rotateX(180deg) scaleY(1.5);
+    }
+    .big-triangle {
+      fill: rgba(255, 255, 255, 0.541);
+    }
+    .small-triangle {
+      
+    }
+  }
+}
