@@ -7,16 +7,24 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
-    <link rel="shortcut icon" href="" type="" />
+    <link rel="shortcut icon" href="img/small-logo.png" type="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=KoHo&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style/css/main.css" />
+    <script async src="js/scroll-to-top.js"></script>
   </head>
   <body>
-    <div class="box">
+    <header class="box">
       <div class="page">
         <div class="main-screen">
           <div class="main-screen__bg ibg">
             <div class="header">
-              <img src="img/NJSD.gif" alt="">
+              <nav></nav>
+              <div class="logo">
+                <img class="" src="img/NJSD.gif" alt="Logotype" title="Website is on creating process"/>
+              </div>
               <!-- <svg>
               <polyline class="big-triangle" points="0,200 150,0 300,200"/>
               <polyline class="small-triangle"points="75,150 150,50 225,150"/>
@@ -25,12 +33,143 @@
           </div>
         </div>
       </div>
-    </div>
-    <header></header>
+    </header>
     <main>
-      <nav></nav>
-      <section><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.427314653043!2d30.523629315337935!3d50.45176697947553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf07b074a25d%3A0xe568f7e431778563!2zaUh1YiDQmtC-0LLQvtGA0LrRltC90LM!5e0!3m2!1sru!2sua!4v1588844366213!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></section>
+      <section class="skills">
+        <h2 class="header">My skills</h2>
+        <ul>
+          <li>
+            HTML
+            <progress min="0" max="100" value="95"></progress>
+          </li>
+          <li>
+            CSS
+            <progress min="0" max="100" value="90"></progress>
+          </li>
+          <li>
+            JavaScript
+            <progress min="0" max="100" value="60"></progress>
+          </li>
+          <li>
+            <progress min="0" max="100" value=""></progress>
+          </li>
+          <li>
+            <progress min="0" max="100" value=""></progress>
+          </li>
+          <li>
+            <progress min="0" max="100" value=""></progress>
+          </li>
+          <li>
+            <progress min="0" max="100" value=""></progress>
+          </li>
+          <li>
+            <progress min="0" max="100" value=""></progress>
+          </li>
+          <li>
+            <progress min="0" max="100" value=""></progress>
+          </li>
+        </ul>
+      </section>
+      <section class="portfolio">
+        <h2 class="header">My works</h2>
+        <div class="row">
+          <div class="column">
+            <a
+              href="https://valkirijya.github.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Click to see website"
+            >
+              <figure>
+                <img
+                  src="img/screenshots/first-site.png"
+                  alt="Screenshot of first website"
+                />
+                <figcaption>
+                  <p>
+                    It's my debut in web-development, my first meeting with HTML
+                    and first steps to IT world. In this site I created SVG
+                    animation and entertaining photo gallery by myself, used
+                    JSON for optimization HTML code and added polaroid-photo
+                    effect, don't seen anywhere this decisions.
+                  </p>
+                  <p><b>Technologies:</b> HTML, CSS, JavaScript.</p>
+                </figcaption>
+              </figure>
+            </a>
+          </div>
+          <div class="column">
+            <a
+              href="https://valkirijya.github.io/Website-on-Bootstrap/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Click to see website"
+            >
+              <figure>
+                <img src="img/screenshots/bootstrap.png" alt="Screenshot of " />
+                <figcaption>
+                  <p>Website on Bootstrap</p>
+                  <p><b>Technologies:</b> Bootstrap, HTML, CSS, SaaS</p>
+                </figcaption>
+              </figure>
+            </a>
+            <a
+              href="https://valkirijya.github.io/DreamMusic/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Click to see website"
+            >
+              <figure>
+                <img
+                  src="img/screenshots/dream-music.png"
+                  alt="Screenshot of DreamMusic"
+                />
+                <figcaption>
+                  <p>Educational mini-project from Cursor on Bootstrap</p>
+                  <p><b>Technologies:</b> Bootstrap, HTML, CSS</p>
+                </figcaption>
+              </figure>
+            </a>
+          </div>
+          <div class="column">
+            <a
+              href="https://valkirijya.github.io/MinesWeeper_Game/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Click to see game"
+            >
+              <figure>
+                <img
+                  src="img/screenshots/mines-weeper-game.png"
+                  alt="Screenshot of MinesWeeper game"
+                />
+                <figcaption>
+                  <p>Little game in pure JavaScript, using RECURSION</p>
+                  <p><b>Technologies:</b> JavaScript, HTML, CSS, SaaS</p>
+                </figcaption>
+              </figure>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29073.0762495486!2d37.14697369994642!3d48.27830157403137!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40de37fdefaa8bfd%3A0x7da8a941169d57c!2z0J_QvtC60YDQvtCy0YHQuiwg0JTQvtC90LXRhtC60LDRjyDQvtCx0LvQsNGB0YLRjCwgODUzMDI!5e1!3m2!1sru!2sua!4v1599997724438!5m2!1sru!2sua"
+          width="100%"
+          height="450"
+          frameborder=""
+          style="border: 0"
+          allowfullscreen=""
+          aria-hidden="false"
+          tabindex=""
+        ></iframe>
+      </section>
     </main>
     <footer></footer>
+
+    <!-------------------Scroll to top-------------------->
+    <a href="#" class="scroll-top-btn hidden">
+      <img src="img/scroll.svg" class="scroll-top-btn-icon" alt="▲" />
+    </a>
   </body>
 </html>

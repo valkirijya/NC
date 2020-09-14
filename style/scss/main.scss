@@ -1,23 +1,36 @@
-::-webkit-scrollbar {
-  /* chrome based */
-  width: 0px; /* ширина scrollbar'a */
-  background: transparent; /* опционально */
+///////////////////Main settings/////////////////////////////
+* {
+  box-sizing: border-box;
 }
 html,
 body {
   height: 100%;
   margin: 0;
-  box-sizing: border-box;
+  font-family: 'KoHo', sans-serif;
+  scroll-behavior: smooth;
   -ms-overflow-style: none; /* IE 10+ */
   scrollbar-width: none; /* Firefox */
 }
-
+::-webkit-scrollbar {
+  /* chrome based */
+  width: 0px;
+  background: transparent;
+}
+a {
+  text-decoration: none;
+}
+.header{
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+}
+////////////////////////First page////////////////////
 .box {
   overflow: hidden;
   min-height: 100%;
 }
 .ibg {
-  background-image: url("../../img/bryzgi-tsvetnye-foto.jpg");
+  background-image: url("../../img/volny_riab_voda.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -51,22 +64,92 @@ body {
   position: relative;
   justify-content: center;
   align-items: center;
-  background-color: rgba(99, 98, 98, 0.445);
+  // background-color: rgba(99, 98, 98, 0.445);
   perspective: 400px;
   transform-style: preserve-3d;
-  svg {
-    width: 300px;
-    height: 200px;
-    transition: 1s ease-in-out 0s;
-    filter: drop-shadow(3px 3px 10px rgba(212, 211, 211, 0.877));
-    &:hover {
-      transform: rotateX(180deg) scaleY(1.5);
-    }
-    .big-triangle {
-      fill: rgba(255, 255, 255, 0.541);
-    }
-    .small-triangle {
-      
-    }
+  // svg {
+  //   width: 300px;
+  //   height: 200px;
+  //   transition: 1s ease-in-out 0s;
+  //   filter: drop-shadow(3px 3px 10px rgba(212, 211, 211, 0.877));
+  //   &:hover {
+  //     transform: rotateX(180deg) scaleY(1.5);
+  //   }
+  //   .big-triangle {
+  //     fill: rgba(255, 255, 255, 0.541);
+  //   }
+  //   .small-triangle {
+  //   }
+  // }
+}
+.logo {
+  width: 40%;
+  img {
+    width: 100%;
+    border-radius: 1em;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.596);
   }
+}
+////////////////////////////Portfolio///////////////////////////////
+.portfolio{
+  background-image: linear-gradient(rgb(79, 154, 252), rgba(95, 226, 226, 0.486), white);
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 10px;
+  justify-content: center;
+}
+.column {
+  flex: 28%;
+  max-width: 28%;
+}
+figure {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  max-width: 595px;
+  margin: 30px 15px;
+  border: 1px solid rgb(102, 101, 101);
+  border-radius: 10px;
+  color: rgb(3, 15, 15);
+  font-size: 1.3rem;
+  background-image: linear-gradient(rgb(46, 137, 255), rgba(95, 226, 226, 0.486), white);
+  &:hover{
+    box-shadow: 3px 3px 10px 0px rgb(65, 64, 64);
+  }
+  img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  p {
+    padding: 0 1rem;
+    text-indent: 1rem;
+    text-align: justify;
+  }
+}
+//////////////////////Scroll to top////////////////////////
+.scroll {
+  border-radius: 50%;
+  transition: 2s ease-in-out;
+}
+.scroll-top-btn {
+  position: fixed;
+  right: 10px;
+  bottom: 11px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 3px 3px 12px 2px rgb(68, 68, 68);
+  background-color: rgba(219, 218, 218, 0.541);
+  z-index: 5;
+}
+.scroll-top-btn-icon {
+  display: block;
+  position: relative;
+  top: 4px;
+  left: 5px;
+  width: 30px;
+  height: 30px;
 }
