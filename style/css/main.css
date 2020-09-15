@@ -7,7 +7,7 @@ html,
 body {
   height: 100%;
   margin: 0;
-  font-family: 'KoHo', sans-serif;
+  font-family: "KoHo", sans-serif;
   scroll-behavior: smooth;
   -ms-overflow-style: none;
   /* IE 10+ */
@@ -23,6 +23,17 @@ body {
 
 a {
   text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
 }
 
 .header {
@@ -31,7 +42,7 @@ a {
   text-align: center;
 }
 
-.box {
+.header {
   overflow: hidden;
   min-height: 100%;
 }
@@ -83,7 +94,7 @@ a {
   left: 0;
 }
 
-.header {
+.box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -94,14 +105,11 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-perspective: 400px;
-          perspective: 400px;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
 }
 
 .logo {
   width: 40%;
+  z-index: 10;
 }
 
 .logo img {
@@ -111,7 +119,25 @@ a {
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.596);
 }
 
-.portfolio {
+.navigation {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  background-color: rgba(99, 98, 98, 0.445);
+}
+
+.visible {
+  visibility: visible;
+}
+
+.list__item a {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  font-size: 1.7rem;
+  color: white;
+}
+
+#works {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#4f9afc), color-stop(rgba(95, 226, 226, 0.486)), to(white));
   background-image: linear-gradient(#4f9afc, rgba(95, 226, 226, 0.486), white);
 }
@@ -185,17 +211,22 @@ figure p {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  -webkit-box-shadow: 3px 3px 12px 2px #444444;
-          box-shadow: 3px 3px 12px 2px #444444;
+  -webkit-box-shadow: 1px 1px 8px 1px #797878;
+          box-shadow: 1px 1px 8px 1px #797878;
   background-color: rgba(219, 218, 218, 0.541);
   z-index: 5;
+}
+
+.scroll-top-btn:hover {
+  -webkit-box-shadow: 3px 3px 12px 2px #444444;
+          box-shadow: 3px 3px 12px 2px #444444;
 }
 
 .scroll-top-btn-icon {
   display: block;
   position: relative;
   top: 4px;
-  left: 5px;
+  left: 4px;
   width: 30px;
   height: 30px;
 }
