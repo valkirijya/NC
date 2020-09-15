@@ -29,7 +29,7 @@ ul {
   margin-block-start: 0;
   margin-block-end: 0;
 }
-.header {
+.title {
   margin: 0;
   padding: 2rem;
   text-align: center;
@@ -78,12 +78,12 @@ ul {
 .logo {
   width: 40%;
   z-index: 10;
-  
+
   img {
     width: 100%;
     border-radius: 1em;
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.596);
-    &:hover{
+    &:hover {
       box-shadow: 2px 2px 3px rgba(29, 29, 29, 0.596);
     }
   }
@@ -145,7 +145,45 @@ ul {
     text-shadow: $t-shadow;
   }
 }
-
+////////////////////////////Skills///////////////////////////////////
+#skills {
+  display: flex;
+}
+.ration-table {
+  text-align: left;
+}
+.ration-table__item {
+  padding: 1.2rem;
+  font-size: 1.5rem;
+}
+progress {
+  color: purple; /* IE10 */
+  background: linear-gradient(pink, blue, rgb(106, 74, 119));
+  border-radius: 10px;
+}
+progress::-moz-progress-bar {
+  background: linear-gradient(pink, blue, rgb(106, 74, 119)); /* Firefox */
+}
+progress::-webkit-progress-value {
+  background: linear-gradient(pink, blue, rgb(106, 74, 119)); /* Chrome */
+}
+.left-side {
+  position: relative;
+  width: 40%;
+  background-image: url("../../img/mountains.jpg");
+  background-size: cover;
+  h2 {
+    position: absolute;
+    font-size: 4rem;
+    top: 40%;
+    color: white;
+    text-shadow: $t-shadow;
+  }
+}
+.rigt-side {
+  width: 60%;
+  text-align: center;
+}
 ////////////////////////////Portfolio///////////////////////////////
 #works {
   background-image: linear-gradient(rgb(79, 154, 252), rgba(95, 226, 226, 0.486), white);
