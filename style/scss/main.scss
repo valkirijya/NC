@@ -1,6 +1,7 @@
 ///////////////////Variables////////////////////////////
 $border: 1px solid rgb(102, 101, 101);
 $t-shadow: 2px 2px 5px rgb(31, 30, 30);
+$l-gradient: linear-gradient( to right, rgb(34, 250, 239), rgb(49, 49, 221), rgb(140, 20, 187));
 ///////////////////Main settings/////////////////////////////
 * {
   box-sizing: border-box;
@@ -34,7 +35,23 @@ ul {
   padding: 2rem;
   text-align: center;
 }
-////////////////////////First page////////////////////////////////
+.title-side {
+  position: relative;
+  width: 40%;
+  background-size: cover;
+  h2 {
+    position: absolute;
+    font-size: 4rem;
+    top: 40%;
+    left: 30%;
+    color: white;
+    text-shadow: $t-shadow;
+  }
+}
+.content-side {
+  width: 60%;
+}
+////////////////////////Title page////////////////////////////////
 .header {
   overflow: hidden;
   min-height: 100%;
@@ -145,58 +162,61 @@ ul {
     text-shadow: $t-shadow;
   }
 }
-////////////////////////////Skills///////////////////////////////////
+////////////////////////////Skills section///////////////////////////////////
 #skills {
   display: flex;
 }
 .ration-table {
-  text-align: left;
+  text-align: right;
 }
 .ration-table__item {
   padding: 1.2rem;
   font-size: 1.5rem;
 }
 progress {
-  color: purple; /* IE10 */
-  background: linear-gradient(pink, blue, rgb(106, 74, 119));
+  width: 80%;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none; 
+  border: 0;
+  margin: 0 1.5rem 0 0.5rem;
+  background: #eee;
+  border-radius: 10px;
+  color: rgb(177, 172, 177); /* IE10 */
+}
+progress::-webkit-progress-bar {
+  background: #eee;
   border-radius: 10px;
 }
 progress::-moz-progress-bar {
-  background: linear-gradient(pink, blue, rgb(106, 74, 119)); /* Firefox */
+  border-radius: 10px;
+  background: $l-gradient; /* Firefox */
 }
 progress::-webkit-progress-value {
-  background: linear-gradient(pink, blue, rgb(106, 74, 119)); /* Chrome */
+  border-radius: 10px;
+  background: $l-gradient; /* Chrome */
 }
-.left-side {
-  position: relative;
-  width: 40%;
-  background-image: url("../../img/mountains.jpg");
-  background-size: cover;
-  h2 {
-    position: absolute;
-    font-size: 4rem;
-    top: 40%;
-    color: white;
-    text-shadow: $t-shadow;
-  }
+.skills__header{
+  background-image: url("../../img/whils.jpg");
 }
-.rigt-side {
-  width: 60%;
+.skills__content{
   text-align: center;
 }
 ////////////////////////////Portfolio///////////////////////////////
 #works {
-  background-image: linear-gradient(rgb(79, 154, 252), rgba(95, 226, 226, 0.486), white);
+  display: flex;
 }
+  
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 10px;
   justify-content: center;
 }
+
 .column {
-  flex: 28%;
-  max-width: 28%;
+  flex: 32%;
+  max-width: 32%;
 }
 figure {
   display: flex;
@@ -222,6 +242,9 @@ figure {
     text-indent: 1rem;
     text-align: justify;
   }
+}
+.works__header{
+  background-image: linear-gradient(rgb(79, 154, 252), rgba(95, 226, 226, 0.486), white);
 }
 /////////////////////Footer////////////////////////////////
 .footer {

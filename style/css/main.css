@@ -42,6 +42,25 @@ ul {
   text-align: center;
 }
 
+.title-side {
+  position: relative;
+  width: 40%;
+  background-size: cover;
+}
+
+.title-side h2 {
+  position: absolute;
+  font-size: 4rem;
+  top: 40%;
+  left: 30%;
+  color: white;
+  text-shadow: 2px 2px 5px #1f1e1e;
+}
+
+.content-side {
+  width: 60%;
+}
+
 .header {
   overflow: hidden;
   min-height: 100%;
@@ -204,7 +223,7 @@ ul {
 }
 
 .ration-table {
-  text-align: left;
+  text-align: right;
 }
 
 .ration-table__item {
@@ -213,47 +232,49 @@ ul {
 }
 
 progress {
-  color: purple;
+  width: 80%;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  border: 0;
+  margin: 0 1.5rem 0 0.5rem;
+  background: #eee;
+  border-radius: 10px;
+  color: #b1acb1;
   /* IE10 */
-  background: -webkit-gradient(linear, left top, left bottom, from(pink), color-stop(blue), to(#6a4a77));
-  background: linear-gradient(pink, blue, #6a4a77);
+}
+
+progress::-webkit-progress-bar {
+  background: #eee;
   border-radius: 10px;
 }
 
 progress::-moz-progress-bar {
-  background: linear-gradient(pink, blue, #6a4a77);
+  border-radius: 10px;
+  background: linear-gradient(to right, #22faef, #3131dd, #8c14bb);
   /* Firefox */
 }
 
 progress::-webkit-progress-value {
-  background: -webkit-gradient(linear, left top, left bottom, from(pink), color-stop(blue), to(#6a4a77));
-  background: linear-gradient(pink, blue, #6a4a77);
+  border-radius: 10px;
+  background: -webkit-gradient(linear, left top, right top, from(#22faef), color-stop(#3131dd), to(#8c14bb));
+  background: linear-gradient(to right, #22faef, #3131dd, #8c14bb);
   /* Chrome */
 }
 
-.left-side {
-  position: relative;
-  width: 40%;
-  background-image: url("../../img/mountains.jpg");
-  background-size: cover;
+.skills__header {
+  background-image: url("../../img/whils.jpg");
 }
 
-.left-side h2 {
-  position: absolute;
-  font-size: 4rem;
-  top: 40%;
-  color: white;
-  text-shadow: 2px 2px 5px #1f1e1e;
-}
-
-.rigt-side {
-  width: 60%;
+.skills__content {
   text-align: center;
 }
 
 #works {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#4f9afc), color-stop(rgba(95, 226, 226, 0.486)), to(white));
-  background-image: linear-gradient(#4f9afc, rgba(95, 226, 226, 0.486), white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .row {
@@ -262,17 +283,16 @@ progress::-webkit-progress-value {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0 10px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
 .column {
-  -webkit-box-flex: 28%;
-      -ms-flex: 28%;
-          flex: 28%;
-  max-width: 28%;
+  -webkit-box-flex: 32%;
+      -ms-flex: 32%;
+          flex: 32%;
+  max-width: 32%;
 }
 
 figure {
@@ -310,6 +330,11 @@ figure p {
   padding: 0 1rem;
   text-indent: 1rem;
   text-align: justify;
+}
+
+.works__header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#4f9afc), color-stop(rgba(95, 226, 226, 0.486)), to(white));
+  background-image: linear-gradient(#4f9afc, rgba(95, 226, 226, 0.486), white);
 }
 
 .footer {
