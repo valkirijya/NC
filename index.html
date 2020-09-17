@@ -30,8 +30,10 @@
     <link rel="stylesheet" href="style/css/main.css" />
     <script async src="js/scroll-to-top.js"></script>
     <script async src="js/script.js"></script>
+    <script async src="https://use.fontawesome.com/f1f19107fa.js"></script>
   </head>
   <body>
+    <!----------------------------Main page----------------------------->
     <header class="header">
       <div class="page">
         <div class="main-screen">
@@ -57,11 +59,10 @@
         </div>
       </div>
     </header>
+
     <main>
+      <!----------------------Skills--------------------------------->
       <section id="skills">
-        <div class="skills__header title-side">
-          <h2 class="title">Skills</h2>
-        </div>
         <div class="skills__content content-side">
           <ul class="ration-table">
             <li class="ration-table__item">
@@ -102,8 +103,16 @@
             </li>
           </ul>
         </div>
+        <div class="skills__header title-side">
+          <h2 class="title">Skills</h2>
+        </div>
       </section>
+
+      <!-----------------------------Works--------------------------->
       <section id="works">
+        <div class="works__header title-side">
+          <h2 class="title">Works</h2>
+        </div>
         <div class="row content-side">
           <div class="column">
             <a
@@ -112,12 +121,14 @@
               rel="noopener noreferrer"
               title="Click to see website"
             >
-              <figure>
-                <img
-                  src="img/screenshots/first-site.png"
-                  alt="Screenshot of first website"
-                />
-                <figcaption>
+              <figure class="work">
+                <div class="work__img">
+                  <img
+                    src="img/screenshots/first-site.png"
+                    alt="Screenshot of first website"
+                  />
+                </div>
+                <figcaption class="work__caption">
                   <p>
                     It's my debut in web-development, my first meeting with HTML
                     and first steps to IT world. In this site I created SVG
@@ -137,9 +148,14 @@
               rel="noopener noreferrer"
               title="Click to see website"
             >
-              <figure>
-                <img src="img/screenshots/bootstrap.png" alt="Screenshot of " />
-                <figcaption>
+              <figure class="work">
+                <div class="work__img">
+                  <img
+                    src="img/screenshots/bootstrap.png"
+                    alt="Screenshot of "
+                  />
+                </div>
+                <figcaption class="work__caption">
                   <p>Website on Bootstrap</p>
                   <p><b>Technologies:</b> Bootstrap, HTML, CSS, Sass</p>
                 </figcaption>
@@ -151,12 +167,14 @@
               rel="noopener noreferrer"
               title="Click to see website"
             >
-              <figure>
-                <img
-                  src="img/screenshots/dream-music.png"
-                  alt="Screenshot of DreamMusic"
-                />
-                <figcaption>
+              <figure class="work">
+                <div class="work__img">
+                  <img
+                    src="img/screenshots/dream-music.png"
+                    alt="Screenshot of DreamMusic"
+                  />
+                </div>
+                <figcaption class="work__caption">
                   <p>Educational mini-project from Cursor on Bootstrap</p>
                   <p><b>Technologies:</b> Bootstrap, HTML, CSS</p>
                 </figcaption>
@@ -170,12 +188,14 @@
               rel="noopener noreferrer"
               title="Click to see game"
             >
-              <figure>
-                <img
-                  src="img/screenshots/mines-weeper-game.png"
-                  alt="Screenshot of MinesWeeper game"
-                />
-                <figcaption>
+              <figure class="work">
+                <div class="work__img">
+                  <img
+                    src="img/screenshots/mines-weeper-game.png"
+                    alt="Screenshot of MinesWeeper game"
+                  />
+                </div>
+                <figcaption class="work__caption">
                   <p>Little game in pure JavaScript, using RECURSION</p>
                   <p><b>Technologies:</b> JavaScript, HTML, CSS, Sass</p>
                 </figcaption>
@@ -183,12 +203,10 @@
             </a>
           </div>
         </div>
-        <div class="works__header title-side">
-          <h2 class="title">Works</h2>
-        </div>
       </section>
 
-      <section id="contacts">
+      <!----------------------------Contacts------------------------->
+      <!-- <section id="contacts">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29073.0762495486!2d37.14697369994642!3d48.27830157403137!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40de37fdefaa8bfd%3A0x7da8a941169d57c!2z0J_QvtC60YDQvtCy0YHQuiwg0JTQvtC90LXRhtC60LDRjyDQvtCx0LvQsNGB0YLRjCwgODUzMDI!5e1!3m2!1sru!2sua!4v1599997724438!5m2!1sru!2sua"
           width="100%"
@@ -199,11 +217,69 @@
           aria-hidden="false"
           tabindex=""
         ></iframe>
-      </section>
+      </section> -->
     </main>
-    <footer class="footer"></footer>
 
-    <!-------------------Scroll to top-------------------->
+    <!------------------------------Footer--------------------------->
+    <footer class="footer">
+      <div class="author" title="Author">
+        <div class="icon">
+          <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+        </div>
+        <p>NJSD</p>
+      </div>
+      <div class="rights" title="Rights">
+        <div class="icon">
+          <i class="fa fa-copyright" aria-hidden="true"></i>
+        </div>
+        <p>All rights are reserved 2020</p>
+      </div>
+      <div class="contacts" title="Contacts">
+        <div class="icon" title="E-mail">
+          <a
+            href="mailto:valpresent@ukr.net"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-envelope" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="icon" title="Telegram">
+          <a
+            href="https://t.me/Nataly_S_WD"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-telegram" aria-hidden="true"></i
+          ></a>
+        </div>
+        <div class="icon" title="Github">
+          <a
+            href="https://github.com/valkirijya"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-github" aria-hidden="true"></i
+          ></a>
+        </div>
+        <div class="icon" title="Linkedin">
+          <a
+            href="https://www.linkedin.com/in/nataly-soboleva-ua/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="icon" title="Facebook">
+          <a
+            href="https://www.linkedin.com/in/nataly-soboleva-ua/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-facebook-square" aria-hidden="true"></i>
+          </i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!------------------------------Scroll to top-------------------->
     <a href="#" class="scroll-top-btn hidden">
       <img src="img/scroll.svg" class="scroll-top-btn-icon" alt="▲" />
     </a>

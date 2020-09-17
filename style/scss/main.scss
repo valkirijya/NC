@@ -1,7 +1,9 @@
 ///////////////////Variables////////////////////////////
 $border: 1px solid rgb(102, 101, 101);
+$b-shadow: 2px 2px 15px 2px rgb(88, 87, 87);
 $t-shadow: 2px 2px 5px rgb(31, 30, 30);
-$l-gradient: linear-gradient( to right, rgb(34, 250, 239), rgb(49, 49, 221), rgb(140, 20, 187));
+$l-gradient: linear-gradient(to right, rgb(34, 250, 239), rgb(49, 49, 221), rgb(140, 20, 187));
+
 ///////////////////Main settings/////////////////////////////
 * {
   box-sizing: border-box;
@@ -51,7 +53,8 @@ ul {
 .content-side {
   width: 60%;
 }
-////////////////////////Title page////////////////////////////////
+
+////////////////////////Title page/////////////////////////////
 .header {
   overflow: hidden;
   min-height: 100%;
@@ -95,13 +98,12 @@ ul {
 .logo {
   width: 40%;
   z-index: 10;
-
   img {
     width: 100%;
     border-radius: 1em;
-    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.596);
+    box-shadow: 3px 3px 5px rgba(29, 29, 29, 0.596);
     &:hover {
-      box-shadow: 2px 2px 3px rgba(29, 29, 29, 0.596);
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.596);
     }
   }
 }
@@ -162,9 +164,16 @@ ul {
     text-shadow: $t-shadow;
   }
 }
-////////////////////////////Skills section///////////////////////////////////
+
+//////////////////////////Skills///////////////////////////////
 #skills {
   display: flex;
+}
+.skills__header {
+  background-image: url("../../img/whils.jpg");
+}
+.skills__content {
+  text-align: center;
 }
 .ration-table {
   text-align: right;
@@ -178,7 +187,7 @@ progress {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
-  border: none; 
+  border: none;
   border: 0;
   margin: 0 1.5rem 0 0.5rem;
   background: #eee;
@@ -197,28 +206,24 @@ progress::-webkit-progress-value {
   border-radius: 10px;
   background: $l-gradient; /* Chrome */
 }
-.skills__header{
-  background-image: url("../../img/whils.jpg");
-}
-.skills__content{
-  text-align: center;
-}
-////////////////////////////Portfolio///////////////////////////////
+
+//////////////////////////Works////////////////////////////
 #works {
   display: flex;
 }
-  
+.works__header {
+  background-image: url("../../img/gory_les_sumerki.jpg");
+}
 .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-
 .column {
   flex: 32%;
   max-width: 32%;
 }
-figure {
+.work {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -228,28 +233,60 @@ figure {
   border-radius: 10px;
   color: rgb(3, 15, 15);
   font-size: 1.3rem;
-  background-image: linear-gradient(rgb(46, 137, 255), rgba(95, 226, 226, 0.486), white);
   &:hover {
     box-shadow: 3px 3px 10px 0px rgb(65, 64, 64);
   }
+}
+.work__img{
+  height: 7rem;
   img {
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
+}
+.work__caption{
+  background-image: linear-gradient(to top, rgba(34, 250, 239, 0.356), rgba(69, 69, 255, 0.548), rgba(140, 20, 187, 0.356));
   p {
     padding: 0 1rem;
     text-indent: 1rem;
     text-align: justify;
   }
 }
-.works__header{
-  background-image: linear-gradient(rgb(79, 154, 252), rgba(95, 226, 226, 0.486), white);
-}
+
 /////////////////////Footer////////////////////////////////
 .footer {
-  min-height: 100px;
-  background-color: rgb(48, 48, 48);
+  min-height: 60px;
+  margin: 0;
+  background-color: rgb(125, 133, 155);
+  box-shadow: $b-shadow;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.3rem;
+}
+.rights,
+.author,
+.contacts {
+  width: 33.33%;
+  display: flex;
+  justify-content: center;
+  margin: auto 15px;
+  vertical-align: middle;
+  p {
+    margin: 0;
+  }
+}
+.icon {
+  font-size: 1.1em;
+  display: inline-block;
+  margin: 0 10px;
+  transition: all 0.5s;
+  &:hover {
+    transform: scale(1.6);
+  }
+  a {
+    color: black;
+  }
 }
 
 //////////////////////Scroll to top////////////////////////
