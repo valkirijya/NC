@@ -45,20 +45,23 @@ ul {
 .title-side {
   position: relative;
   width: 40%;
+  max-height: 620px;
   background-size: cover;
 }
 
 .title-side h2 {
   position: absolute;
+  width: 100%;
   font-size: 4rem;
-  top: 40%;
-  left: 30%;
+  top: 50%;
+  margin-top: -2rem;
   color: white;
   text-shadow: 2px 2px 5px #1f1e1e;
 }
 
 .content-side {
   width: 60%;
+  max-height: 620px;
 }
 
 .header {
@@ -127,7 +130,7 @@ ul {
 }
 
 .logo {
-  width: 40%;
+  width: 47%;
   z-index: 10;
 }
 
@@ -146,7 +149,8 @@ ul {
 .navigation {
   visibility: hidden;
   position: absolute;
-  left: 0;
+  left: -3.5rem;
+  height: 98.5%;
   border-radius: 10px;
   background-color: rgba(99, 98, 98, 0.445);
   -webkit-transition: all 0.5s;
@@ -154,6 +158,10 @@ ul {
 }
 
 .navigation:hover {
+  visibility: visible;
+}
+
+.visible {
   visibility: visible;
 }
 
@@ -188,13 +196,9 @@ ul {
   }
 }
 
-.visible {
-  visibility: visible;
-}
-
-.list__item {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+.navigation__item {
+  text-align: center;
+  border-radius: 10px;
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
@@ -202,18 +206,34 @@ ul {
   padding-right: 20px;
 }
 
-.list__item:hover {
+.navigation__item:hover {
   background-color: rgba(245, 237, 237, 0.336);
   -webkit-transform: translateX(-15px);
           transform: translateX(-15px);
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.596);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.596);
 }
 
-.list__item a {
+.navigation__item a {
   display: inline-block;
-  padding: 0.5rem 2rem;
-  font-size: 1.7rem;
+  padding: 0.35rem 2rem;
+  font-size: 1.71rem;
   color: white;
   text-shadow: 2px 2px 5px #1f1e1e;
+}
+
+#about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about__header {
+  background-image: url("../../img/skaly_more_okean_zakat.jpg");
+}
+
+.about__content {
+  padding: 4rem;
 }
 
 #skills {
@@ -231,11 +251,12 @@ ul {
 }
 
 .ration-table {
+  margin: 1.6rem 0;
   text-align: right;
 }
 
 .ration-table__item {
-  padding: 1.2rem;
+  padding: 1rem;
   font-size: 1.5rem;
 }
 
@@ -271,6 +292,40 @@ progress::-webkit-progress-value {
   /* Chrome */
 }
 
+#certificates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.certificates__header {
+  background-image: url("../../img/skaly_vecher_serye.jpg");
+  z-index: 5;
+}
+
+.certificate {
+  max-width: 595px;
+  margin: 30px 15px;
+  border-radius: 5px;
+  color: #030f0f;
+  font-size: 1.3rem;
+}
+
+.certificate:hover {
+  -webkit-box-shadow: 3px 3px 10px 0px #414040;
+          box-shadow: 3px 3px 10px 0px #414040;
+}
+
+.certificate__img {
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.certificate__img img {
+  margin-bottom: -5px;
+  width: 100%;
+}
+
 #works {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -279,24 +334,58 @@ progress::-webkit-progress-value {
 
 .works__header {
   background-image: url("../../img/gory_les_sumerki.jpg");
+  z-index: 5;
+}
+
+.works__header::before {
+  content: "";
+  position: absolute;
+  top: -3rem;
+  left: -50%;
+  width: 150%;
+  height: 3rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(white));
+  background: linear-gradient(transparent, white);
+  z-index: 1;
 }
 
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0 1rem;
+  overflow: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  /* IE 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.row::-webkit-scrollbar {
+  /* chrome based */
+  width: 0px;
+  background: transparent;
+}
+
+.row.content-side::before {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 3rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(transparent));
+  background: linear-gradient(white, transparent);
+  z-index: 1;
 }
 
 .column {
-  -webkit-box-flex: 32%;
-      -ms-flex: 32%;
-          flex: 32%;
-  max-width: 32%;
+  -webkit-box-flex: 49%;
+      -ms-flex: 49%;
+          flex: 49%;
+  max-width: 49%;
 }
 
 .work {
@@ -323,16 +412,19 @@ progress::-webkit-progress-value {
 }
 
 .work__img {
-  height: 7rem;
-}
-
-.work__img img {
-  width: 100%;
+  overflow: hidden;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
+.work__img img {
+  margin-bottom: -5px;
+  width: 100%;
+}
+
 .work__caption {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(34, 250, 239, 0.356)), color-stop(rgba(69, 69, 255, 0.548)), to(rgba(140, 20, 187, 0.356)));
   background-image: linear-gradient(to top, rgba(34, 250, 239, 0.356), rgba(69, 69, 255, 0.548), rgba(140, 20, 187, 0.356));
 }
@@ -343,12 +435,48 @@ progress::-webkit-progress-value {
   text-align: justify;
 }
 
+#contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contacts__header::before {
+  content: "";
+  position: absolute;
+  top: -3rem;
+  width: 150%;
+  height: 3rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(white));
+  background: linear-gradient(transparent, white);
+  z-index: 1;
+}
+
+.contacts__content {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.contacts {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.contact-name, .contact-email, .contact-message, .submit {
+  padding-bottom: 2rem;
+}
+
+.notification-message {
+  padding-bottom: 1rem;
+}
+
 .footer {
   min-height: 60px;
   margin: 0;
   background-color: #7d859b;
-  -webkit-box-shadow: 2px 2px 15px 2px #585757;
-          box-shadow: 2px 2px 15px 2px #585757;
+  -webkit-box-shadow: 3px 3px 5px rgba(29, 29, 29, 0.596);
+          box-shadow: 3px 3px 5px rgba(29, 29, 29, 0.596);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -359,7 +487,7 @@ progress::-webkit-progress-value {
 
 .rights,
 .author,
-.contacts {
+.connection {
   width: 33.33%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -373,7 +501,7 @@ progress::-webkit-progress-value {
 
 .rights p,
 .author p,
-.contacts p {
+.connection p {
   margin: 0;
 }
 

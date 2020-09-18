@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-178030508-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-178030508-1");
-    </script>
-
     <meta charset="UTF-8" />
     <meta name="author" content="" />
     <meta name="keywords" content="" />
@@ -33,18 +18,23 @@
     <script async src="https://use.fontawesome.com/f1f19107fa.js"></script>
   </head>
   <body>
-    <!----------------------------Main page----------------------------->
+    <!------------------------Main page----------------------------->
     <header class="header">
       <div class="page">
         <div class="main-screen">
           <div class="main-screen__bg ibg">
             <div class="box">
               <nav class="navigation">
-                <ul class="list">
-                  <li class="list__item"><a href="">About</a></li>
-                  <li class="list__item"><a href="#skills">Skills</a></li>
-                  <li class="list__item"><a href="#works">Works</a></li>
-                  <li class="list__item"><a href="#contacts">Contacts</a></li>
+                <ul class="navigation-list">
+                  <li class="navigation__item"><a href="#">About</a></li>
+                  <li class="navigation__item"><a href="#skills">Skills</a></li>
+                  <li class="navigation__item">
+                    <a href="#certificates">Certificates</a>
+                  </li>
+                  <li class="navigation__item"><a href="#works">Works</a></li>
+                  <li class="navigation__item">
+                    <a href="#contacts">Contacts</a>
+                  </li>
                 </ul>
               </nav>
               <div class="logo">
@@ -61,6 +51,23 @@
     </header>
 
     <main>
+      <!-----------------------------About---------------------------->
+      <section id="about">
+        <div class="about__header title-side">
+          <h2 class="title">About</h2>
+        </div>
+        <div class="about__content content-side">
+          <p class="about__content_text">
+            Let's tell some words about me. Well it's hard, maybe later...
+          </p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem possimus maiores autem! Fugiat, aspernatur? Ipsam voluptates, molestiae maiores iusto laborum earum, quas deleniti ex eius deserunt repellendus veniam soluta nobis.</p>
+          <p>Eaque reprehenderit dolorum quos est consequatur sequi laudantium, nulla esse error quidem doloremque vitae voluptate ducimus corporis eum tenetur ipsum suscipit alias! Ex cumque obcaecati ipsa corporis at voluptatum voluptate?</p>
+          <p>Velit sed fugit numquam voluptatum esse quas cum dolor, corporis excepturi cupiditate provident dolorem repudiandae. Repellendus sapiente aut tempore eos voluptatibus officiis quae, illum, ratione architecto vitae, impedit consectetur ipsam.</p>
+          <p>Ratione in saepe debitis dolores sed cumque, exercitationem ipsum obcaecati ut ab dignissimos iusto libero qui quis ducimus blanditiis vel! Neque, voluptatum eveniet? Numquam cum ullam qui, exercitationem et dignissimos.</p>
+          <p>Totam necessitatibus facilis consectetur repellendus asperiores amet, dicta nisi cupiditate illo praesentium sequi neque dignissimos, iure odio, soluta dolore. Et temporibus eligendi dolore modi fugiat assumenda blanditiis voluptate a libero!</p>
+        </div>
+      </section>
+
       <!----------------------Skills--------------------------------->
       <section id="skills">
         <div class="skills__content content-side">
@@ -108,11 +115,57 @@
         </div>
       </section>
 
+      <!-----------------------Certificates-------------------------->
+      <section id="certificates">
+        <div class="certificates__header title-side">
+          <h2 class="title">Certificates</h2>
+        </div>
+        <div class="row content-side">
+          <div class="column">
+            <figure class="certificate">
+              <div class="certificate__img">
+                <img
+                  src="img/sertificates/Codifun - Digital skills.png"
+                  alt="Certificate EdEra"
+                />
+              </div>
+              <figcaption class="certificate__caption"></figcaption>
+            </figure>
+            <figure class="certificate">
+              <div class="certificate__img">
+                <img
+                  src="img/sertificates/Codifun - Digital skills.png"
+                  alt="Certificate EdEra"
+                />
+              </div>
+              <figcaption class="certificate__caption"></figcaption>
+            </figure>
+            <figure class="certificate">
+              <div class="certificate__img">
+                <img
+                  src="img/sertificates/Codifun - Digital skills.png"
+                  alt="Certificate EdEra"
+                />
+              </div>
+              <figcaption class="certificate__caption"></figcaption>
+            </figure>
+          </div>
+          <div class="column">
+            <figure class="certificate">
+              <div class="certificate__img">
+                <img
+                  src="img/sertificates/Codifun - Digital skills.png"
+                  alt="Certificate EdEra"
+                />
+              </div>
+              <figcaption class="certificate__caption"></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
       <!-----------------------------Works--------------------------->
       <section id="works">
-        <div class="works__header title-side">
-          <h2 class="title">Works</h2>
-        </div>
         <div class="row content-side">
           <div class="column">
             <a
@@ -140,6 +193,25 @@
                 </figcaption>
               </figure>
             </a>
+            <a
+              href="https://valkirijya.github.io/MinesWeeper_Game/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Click to see game"
+            >
+              <figure class="work">
+                <div class="work__img">
+                  <img
+                    src="img/screenshots/mines-weeper-game.png"
+                    alt="Screenshot of MinesWeeper game"
+                  />
+                </div>
+                <figcaption class="work__caption">
+                  <p>Little game in pure JavaScript, using RECURSION</p>
+                  <p><b>Technologies:</b> JavaScript, HTML, CSS, Sass</p>
+                </figcaption>
+              </figure>
+            </a>
           </div>
           <div class="column">
             <a
@@ -152,7 +224,7 @@
                 <div class="work__img">
                   <img
                     src="img/screenshots/bootstrap.png"
-                    alt="Screenshot of "
+                    alt="Screenshot of website on Bootstrap"
                   />
                 </div>
                 <figcaption class="work__caption">
@@ -181,43 +253,71 @@
               </figure>
             </a>
           </div>
-          <div class="column">
-            <a
-              href="https://valkirijya.github.io/MinesWeeper_Game/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Click to see game"
-            >
-              <figure class="work">
-                <div class="work__img">
-                  <img
-                    src="img/screenshots/mines-weeper-game.png"
-                    alt="Screenshot of MinesWeeper game"
-                  />
-                </div>
-                <figcaption class="work__caption">
-                  <p>Little game in pure JavaScript, using RECURSION</p>
-                  <p><b>Technologies:</b> JavaScript, HTML, CSS, Sass</p>
-                </figcaption>
-              </figure>
-            </a>
-          </div>
+        </div>
+        <div class="works__header title-side">
+          <h2 class="title">Works</h2>
         </div>
       </section>
 
       <!----------------------------Contacts------------------------->
-      <!-- <section id="contacts">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29073.0762495486!2d37.14697369994642!3d48.27830157403137!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40de37fdefaa8bfd%3A0x7da8a941169d57c!2z0J_QvtC60YDQvtCy0YHQuiwg0JTQvtC90LXRhtC60LDRjyDQvtCx0LvQsNGB0YLRjCwgODUzMDI!5e1!3m2!1sru!2sua!4v1599997724438!5m2!1sru!2sua"
-          width="100%"
-          height="450"
-          frameborder=""
-          style="border: 0"
-          allowfullscreen=""
-          aria-hidden="false"
-          tabindex=""
-        ></iframe>
-      </section> -->
+      <section id="contacts">
+        <div class="contacts__header title-side">
+          <h2 class="title">Contacts</h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29073.0762495486!2d37.14697369994642!3d48.27830157403137!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40de37fdefaa8bfd%3A0x7da8a941169d57c!2z0J_QvtC60YDQvtCy0YHQuiwg0JTQvtC90LXRhtC60LDRjyDQvtCx0LvQsNGB0YLRjCwgODUzMDI!5e1!3m2!1sru!2sua!4v1599997724438!5m2!1sru!2sua"
+            width="100%"
+            height="100%"
+            frameborder=""
+            style="border: 0"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex=""
+          ></iframe>
+        </div>
+        <div class="contacts__content content-side">
+          <form class="contacts" action="mailto:nataly.j.s.d@gmail.com">
+            <div class="contact-name">
+              <label for="name">Name</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Ваше имя"
+                autofocus
+                required
+              />
+            </div>
+            <div class="contact-email">
+              <label for="email">E-mail</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="email@example.com"
+                required
+              />
+            </div>
+            <div class="contact-message">
+              <label for="message">Message<br /></label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="All your questions write here"
+                required
+              ></textarea>
+            </div>
+            <p class="notification-message"></p>
+            <br />
+            <div class="submit">
+              <input id="submit" type="submit" value="Send" />
+            </div>
+          </form>
+        </div>
+
+        <!-- <i class="fa fa-angle-up" aria-hidden="true"></i>
+        <i class="fa fa-bars" aria-hidden="true"></i>
+ -->
+      </section>
     </main>
 
     <!------------------------------Footer--------------------------->
@@ -234,54 +334,73 @@
         </div>
         <p>All rights are reserved 2020</p>
       </div>
-      <div class="contacts" title="Contacts">
+      <div class="connection" title="Connection">
         <div class="icon" title="E-mail">
           <a
             href="mailto:valpresent@ukr.net"
             target="_blank"
             rel="noopener noreferrer"
-            ><i class="fa fa-envelope" aria-hidden="true"></i>
+          >
+            <i class="fa fa-envelope" aria-hidden="true"></i>
           </a>
         </div>
         <div class="icon" title="Telegram">
           <a
-            href="https://t.me/Nataly_S_WD"
+            href="https://t.me/Nj_Sd"
             target="_blank"
             rel="noopener noreferrer"
-            ><i class="fa fa-telegram" aria-hidden="true"></i
-          ></a>
-        </div>
-        <div class="icon" title="Github">
-          <a
-            href="https://github.com/valkirijya"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i class="fa fa-github" aria-hidden="true"></i
-          ></a>
+          >
+            <i class="fa fa-telegram" aria-hidden="true"></i>
+          </a>
         </div>
         <div class="icon" title="Linkedin">
           <a
             href="https://www.linkedin.com/in/nataly-soboleva-ua/"
             target="_blank"
             rel="noopener noreferrer"
-            ><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+          >
+            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="icon" title="Github">
+          <a
+            href="https://github.com/valkirijya"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa fa-github" aria-hidden="true"></i>
           </a>
         </div>
         <div class="icon" title="Facebook">
           <a
-            href="https://www.linkedin.com/in/nataly-soboleva-ua/"
+            href="https://www.facebook.com/nataly.soboleva.d"
             target="_blank"
             rel="noopener noreferrer"
-            ><i class="fa fa-facebook-square" aria-hidden="true"></i>
-          </i>
+          >
+            <i class="fa fa-facebook-square" aria-hidden="true"></i>
           </a>
         </div>
       </div>
     </footer>
 
     <!------------------------------Scroll to top-------------------->
-    <a href="#" class="scroll-top-btn hidden">
+    <a href="#" class="scroll-top-btn">
       <img src="img/scroll.svg" class="scroll-top-btn-icon" alt="▲" />
     </a>
+
+    <!------------Global site tag (gtag.js) - Google Analytics------>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-178030508-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-178030508-1");
+    </script>
   </body>
 </html>

@@ -1,6 +1,7 @@
 ///////////////////Variables////////////////////////////
 $border: 1px solid rgb(102, 101, 101);
-$b-shadow: 2px 2px 15px 2px rgb(88, 87, 87);
+$b-shadow: 3px 3px 5px rgba(29, 29, 29, 0.596);
+$b-shadow-dark: 10px 10px 10px rgba(0, 0, 0, 0.596);
 $t-shadow: 2px 2px 5px rgb(31, 30, 30);
 $l-gradient: linear-gradient(to right, rgb(34, 250, 239), rgb(49, 49, 221), rgb(140, 20, 187));
 
@@ -40,18 +41,21 @@ ul {
 .title-side {
   position: relative;
   width: 40%;
+  max-height: 620px;
   background-size: cover;
   h2 {
     position: absolute;
+    width: 100%;
     font-size: 4rem;
-    top: 40%;
-    left: 30%;
+    top: 50%;
+    margin-top: -2rem;
     color: white;
     text-shadow: $t-shadow;
   }
 }
 .content-side {
   width: 60%;
+  max-height: 620px;
 }
 
 ////////////////////////Title page/////////////////////////////
@@ -96,27 +100,31 @@ ul {
   align-items: center;
 }
 .logo {
-  width: 40%;
+  width: 47%;
   z-index: 10;
   img {
     width: 100%;
     border-radius: 1em;
-    box-shadow: 3px 3px 5px rgba(29, 29, 29, 0.596);
+    box-shadow: $b-shadow;
     &:hover {
-      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.596);
+      box-shadow: $b-shadow-dark;
     }
   }
 }
 .navigation {
   visibility: hidden;
   position: absolute;
-  left: 0;
+  left: -3.5rem;
+  height: 98.5%;
   border-radius: 10px;
   background-color: rgba(99, 98, 98, 0.445);
   transition: all 0.5s;
   &:hover {
     visibility: visible;
   }
+}
+.visible {
+  visibility: visible;
 }
 .animation-slide {
   animation: slide 1 1s;
@@ -131,38 +139,33 @@ ul {
     transform: translateX(0);
   }
 }
-// .animation-opasity{
-//   animation: opasity 1 1s;
-// }
-// @keyframes opasity{
-//   0% {
-//     opacity: 1;
-//     transform: translateX(0);
-//   }
-//   100% {
-//     opacity: 0;
-//     transform: translateX(200px);
-//   }
-// }
-.visible {
-  visibility: visible;
-}
-.list__item {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+.navigation__item {
+  text-align: center;
+  border-radius: 10px;
   transition: transform 0.5s;
   padding-right: 20px;
   &:hover {
     background-color: rgba(245, 237, 237, 0.336);
     transform: translateX(-15px);
+    box-shadow: $b-shadow-dark;
   }
   a {
     display: inline-block;
-    padding: 0.5rem 2rem;
-    font-size: 1.7rem;
+    padding: 0.35rem 2rem;
+    font-size: 1.71rem;
     color: white;
     text-shadow: $t-shadow;
   }
+}
+////////////////////////////About///////////////////////////////
+#about{
+  display: flex;
+}
+.about__header{
+  background-image: url("../../img/skaly_more_okean_zakat.jpg");
+}
+.about__content{
+  padding: 4rem;
 }
 
 //////////////////////////Skills///////////////////////////////
@@ -176,10 +179,11 @@ ul {
   text-align: center;
 }
 .ration-table {
+  margin: 1.6rem 0;
   text-align: right;
 }
 .ration-table__item {
-  padding: 1.2rem;
+  padding: 1rem;
   font-size: 1.5rem;
 }
 progress {
@@ -207,21 +211,75 @@ progress::-webkit-progress-value {
   background: $l-gradient; /* Chrome */
 }
 
+//////////////////////////////Certificates//////////////////
+#certificates {
+  display: flex;
+}
+.certificates__header {
+  background-image: url("../../img/skaly_vecher_serye.jpg");
+  z-index: 5;
+}
+.certificate {
+  max-width: 595px;
+  margin: 30px 15px;
+  border-radius: 5px;
+  color: rgb(3, 15, 15);
+  font-size: 1.3rem;
+  &:hover {
+    box-shadow: 3px 3px 10px 0px rgb(65, 64, 64);
+  }
+}
+.certificate__img {
+  overflow: hidden;
+  border-radius: 5px;
+  img {
+    margin-bottom: -5px;
+    width: 100%;
+  }
+}
 //////////////////////////Works////////////////////////////
 #works {
   display: flex;
 }
 .works__header {
   background-image: url("../../img/gory_les_sumerki.jpg");
+  z-index: 5;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -3rem;
+    left: -50%;
+    width: 150%;
+    height: 3rem;
+    background: linear-gradient(transparent, white);
+    z-index: 1;
+  }
 }
 .row {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  padding: 0 1rem;
+  overflow: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    /* chrome based */
+    width: 0px;
+    background: transparent;
+  }
+  &.content-side::before {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 3rem;
+    background: linear-gradient(white, transparent);
+    z-index: 1;
+  }
 }
 .column {
-  flex: 32%;
-  max-width: 32%;
+  flex: 49%;
+  max-width: 49%;
 }
 .work {
   display: flex;
@@ -237,21 +295,59 @@ progress::-webkit-progress-value {
     box-shadow: 3px 3px 10px 0px rgb(65, 64, 64);
   }
 }
-.work__img{
-  height: 7rem;
+.work__img {
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   img {
+    margin-bottom: -5px;
     width: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
   }
 }
-.work__caption{
-  background-image: linear-gradient(to top, rgba(34, 250, 239, 0.356), rgba(69, 69, 255, 0.548), rgba(140, 20, 187, 0.356));
+.work__caption {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-image: linear-gradient(
+    to top,
+    rgba(34, 250, 239, 0.356),
+    rgba(69, 69, 255, 0.548),
+    rgba(140, 20, 187, 0.356)
+  );
   p {
     padding: 0 1rem;
     text-indent: 1rem;
     text-align: justify;
   }
+}
+////////////////////Contacts////////////////////////////////
+#contacts {
+  display: flex;
+}
+.contacts__header {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -3rem;
+    width: 150%;
+    height: 3rem;
+    background: linear-gradient(transparent, white);
+    z-index: 1;
+  }
+}
+.contacts__content {
+  text-align: center;
+  font-size: 1.4rem;
+}
+.contacts{
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.contact-name, .contact-email, .contact-message, .submit{
+  padding-bottom: 2rem;
+}
+.notification-message{
+  padding-bottom: 1rem;
 }
 
 /////////////////////Footer////////////////////////////////
@@ -266,7 +362,7 @@ progress::-webkit-progress-value {
 }
 .rights,
 .author,
-.contacts {
+.connection {
   width: 33.33%;
   display: flex;
   justify-content: center;
