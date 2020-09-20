@@ -22,8 +22,8 @@ body {
 }
 
 a {
-  text-decoration: none;
   cursor: pointer;
+  text-decoration: none;
 }
 
 ul {
@@ -215,7 +215,7 @@ ul {
 }
 
 .navigation__item a {
-  display: inline-block;
+  display: block;
   padding: 0.35rem 2rem;
   font-size: 1.71rem;
   color: white;
@@ -458,17 +458,76 @@ progress::-webkit-progress-value {
 }
 
 .contacts {
-  max-width: 400px;
+  max-width: 700px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 3rem 2rem;
 }
 
 .contact-name, .contact-email, .contact-message, .submit {
   padding-bottom: 2rem;
 }
 
+.contact-name label, .contact-email label, .contact-message label, .submit label {
+  padding: 0 1rem 1rem;
+  display: inline-block;
+}
+
+#name,
+#email {
+  height: 3vw;
+  width: 18vw;
+  font-size: 0.9em;
+  border-radius: 5px;
+  border: 1px solid #666565;
+  font-family: "Amatic SC", cursive;
+  text-align: center;
+}
+
+#name:hover,
+#email:hover {
+  -webkit-box-shadow: 3px 3px 5px rgba(29, 29, 29, 0.596);
+          box-shadow: 3px 3px 5px rgba(29, 29, 29, 0.596);
+}
+
+#message {
+  height: 10vw;
+  width: 40vw;
+  text-align: left;
+  font-size: 0.9em;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #666565;
+  font-family: "Amatic SC", cursive;
+  outline-color: black;
+}
+
+#message:hover {
+  -webkit-box-shadow: 3px 3px 5px rgba(29, 29, 29, 0.596);
+          box-shadow: 3px 3px 5px rgba(29, 29, 29, 0.596);
+}
+
 .notification-message {
+  display: inline-block;
+  font-size: 0.9em;
+  border-radius: 5px;
   padding-bottom: 1rem;
+  background-color: rgba(165, 172, 172, 0.281);
+  visibility: hidden;
+}
+
+#submit {
+  height: 50px;
+  width: 150px;
+  font-size: 0.9em;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "Amatic SC", cursive;
+  border: 1px solid #666565;
+}
+
+#submit:hover {
+  -webkit-box-shadow: 3px 3px 5px rgba(29, 29, 29, 0.596);
+          box-shadow: 3px 3px 5px rgba(29, 29, 29, 0.596);
 }
 
 .footer {
