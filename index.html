@@ -18,10 +18,10 @@
     <script async src="https://use.fontawesome.com/f1f19107fa.js"></script>
   </head>
   <body>
-    <!------------------------Main page----------------------------->
+    <!------------------Main page------------------------->
     <header class="header">
       <div class="page">
-        <div class="main-screen">
+        <div class="main-screen" id="top">
           <div class="main-screen__bg ibg">
             <div class="box">
               <nav class="navigation">
@@ -51,49 +51,29 @@
     </header>
 
     <main>
-      <!-----------------------------About---------------------------->
+      <!-----------------About---------------------------->
       <section id="about">
         <div class="about__header title-side">
           <h2 class="title">About</h2>
         </div>
         <div class="about__content content-side">
-          <p class="about__content_text">
-            Let's tell some words about me. Well it's hard, maybe later...
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
-            possimus maiores autem! Fugiat, aspernatur? Ipsam voluptates,
-            molestiae maiores iusto laborum earum, quas deleniti ex eius
-            deserunt repellendus veniam soluta nobis.
-          </p>
-          <p>
-            Eaque reprehenderit dolorum quos est consequatur sequi laudantium,
-            nulla esse error quidem doloremque vitae voluptate ducimus corporis
-            eum tenetur ipsum suscipit alias! Ex cumque obcaecati ipsa corporis
-            at voluptatum voluptate?
-          </p>
-          <p>
-            Velit sed fugit numquam voluptatum esse quas cum dolor, corporis
-            excepturi cupiditate provident dolorem repudiandae. Repellendus
-            sapiente aut tempore eos voluptatibus officiis quae, illum, ratione
-            architecto vitae, impedit consectetur ipsam.
-          </p>
-          <p>
-            Ratione in saepe debitis dolores sed cumque, exercitationem ipsum
-            obcaecati ut ab dignissimos iusto libero qui quis ducimus blanditiis
-            vel! Neque, voluptatum eveniet? Numquam cum ullam qui,
-            exercitationem et dignissimos.
-          </p>
-          <p>
-            Totam necessitatibus facilis consectetur repellendus asperiores
-            amet, dicta nisi cupiditate illo praesentium sequi neque
-            dignissimos, iure odio, soluta dolore. Et temporibus eligendi dolore
-            modi fugiat assumenda blanditiis voluptate a libero!
-          </p>
+          <div class="about__content_avatar">
+            <img src="img/its_me.png" alt="Avatar" />
+          </div>
+          <div class="about__content_text">
+            <h3>Hello!</h3>
+            <p>My name is <span class="avatar">Nataly.</span></p>
+            <p>
+              I am determined and productive web developer with a passion for
+              creative solutions. Proficient in HTML, CSS and JavaScript.
+              Dedicated to learning additional technologies and programming
+              languages (currently enrolled in a Node.js course).
+            </p>
+          </div>
         </div>
       </section>
 
-      <!----------------------Skills--------------------------------->
+      <!----------------Skills---------------------------->
       <section id="skills">
         <div class="skills__content content-side">
           <ul class="ration-table">
@@ -127,7 +107,7 @@
             </li>
             <li class="ration-table__item">
               React
-              <progress min="0" max="100" value="20"></progress>
+              <progress min="0" max="100" value="35"></progress>
             </li>
             <li class="ration-table__item">
               Git
@@ -140,7 +120,7 @@
         </div>
       </section>
 
-      <!-----------------------Certificates-------------------------->
+      <!----------------Certificates---------------------->
       <section id="certificates">
         <div class="certificates__header title-side">
           <h2 class="title">Certificates</h2>
@@ -165,7 +145,7 @@
               </div>
               <figcaption class="certificate__caption"></figcaption>
             </figure>
-            
+
             <figure class="certificate">
               <div class="certificate__img">
                 <img
@@ -204,7 +184,7 @@
               </div>
               <figcaption class="certificate__caption"></figcaption>
             </figure>
-            
+
             <figure class="certificate">
               <div class="certificate__img">
                 <img
@@ -227,7 +207,7 @@
         </div>
       </section>
 
-      <!-----------------------------Works--------------------------->
+      <!--------------------Works------------------------->
       <section id="works">
         <div class="row content-side">
           <div class="column">
@@ -278,6 +258,25 @@
           </div>
           <div class="column">
             <a
+              href="https://valkirijya.github.io/air-quality/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Click to see website"
+            >
+              <figure class="work">
+                <div class="work__img">
+                  <img
+                    src="img/screenshots/react.png"
+                    alt="Screenshot of website on Bootstrap"
+                  />
+                </div>
+                <figcaption class="work__caption">
+                  <p>Website on React</p>
+                  <p><b>Technologies:</b> React, HTML, CSS, Sass</p>
+                </figcaption>
+              </figure>
+            </a>
+            <a
               href="https://valkirijya.github.io/Website-on-Bootstrap/"
               target="_blank"
               rel="noopener noreferrer"
@@ -322,20 +321,22 @@
         </div>
       </section>
 
-      <!----------------------------Contacts------------------------->
+      <!--------------------Contacts---------------------->
       <section id="contacts">
-        <div class="contacts__header title-side">
-          <h2 class="title">Contacts</h2>
+        <div class="contacts__background">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29073.0762495486!2d37.14697369994642!3d48.27830157403137!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40de37fdefaa8bfd%3A0x7da8a941169d57c!2z0J_QvtC60YDQvtCy0YHQuiwg0JTQvtC90LXRhtC60LDRjyDQvtCx0LvQsNGB0YLRjCwgODUzMDI!5e1!3m2!1sru!2sua!4v1599997724438!5m2!1sru!2sua"
-            width="100%"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d34626.06839464142!2d37.207846207387306!3d48.28296178362173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sru!2sua!4v1601840996570!5m2!1sru!2sua"
+            width="125%"
             height="100%"
-            frameborder=""
+            frameborder="0"
             style="border: 0"
             allowfullscreen=""
             aria-hidden="false"
-            tabindex=""
+            tabindex="0"
           ></iframe>
+        </div>
+        <div class="contacts__header title-side">
+          <h2 class="title">Contacts</h2>
         </div>
         <div class="contacts__content content-side">
           <form class="contacts" action="mailto:nataly.j.s.d@gmail.com">
@@ -381,7 +382,7 @@
       </section>
     </main>
 
-    <!------------------------------Footer--------------------------->
+    <!---------------------Footer------------------------->
     <footer class="footer">
       <div class="author" title="Author">
         <div class="icon">
@@ -444,12 +445,12 @@
       </div>
     </footer>
 
-    <!------------------------------Scroll to top-------------------->
-    <a href="#" class="scroll-top-btn">
+    <!-------------------Scroll to top-------------------->
+    <a href="#top" class="scroll-top-btn">
       <img src="img/scroll.svg" class="scroll-top-btn-icon" alt="▲" />
     </a>
 
-    <!------------Global site tag (gtag.js) - Google Analytics------>
+    <!----Global site tag (gtag.js) - Google Analytics---->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-178030508-1"
