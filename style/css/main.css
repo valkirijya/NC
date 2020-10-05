@@ -64,7 +64,11 @@ ul {
   max-height: 620px;
 }
 
-#about, #skills, #certificates, #works, #contacts {
+#about,
+#skills,
+#certificates,
+#works,
+#contacts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -246,28 +250,14 @@ ul {
   display: flex;
 }
 
-.about__content_avatar {
-  width: 30%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  visibility: hidden;
-}
-
-.about__content_avatar img {
-  width: 100%;
-}
-
 .about__content_text {
-  width: 70%;
   font-size: 1.5rem;
-  padding: 4rem 4rem 4rem 1rem;
+  padding: 4rem;
+}
+
+blockquote {
+  text-align: right;
+  font-style: italic;
 }
 
 .skills__header {
@@ -497,11 +487,17 @@ progress::-webkit-progress-value {
   padding: 3rem 2rem;
 }
 
-.contact-name, .contact-email, .contact-message, .submit {
+.contact-name,
+.contact-email,
+.contact-message,
+.submit {
   padding-bottom: 2rem;
 }
 
-.contact-name label, .contact-email label, .contact-message label, .submit label {
+.contact-name label,
+.contact-email label,
+.contact-message label,
+.submit label {
   padding: 0 1rem 1rem;
   display: inline-block;
 }
@@ -605,12 +601,32 @@ progress::-webkit-progress-value {
   margin: 0;
 }
 
+.icon_me {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 1px solid white;
+  margin: 0.8rem;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon_me:hover {
+  -webkit-transform: scale(3) translateY(-30px) translateX(-17px);
+          transform: scale(3) translateY(-30px) translateX(-17px);
+}
+
+.icon_me img {
+  width: 100%;
+}
+
 .icon {
   font-size: 1.8rem;
   display: inline-block;
   margin: 0 10px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .icon:hover {
@@ -649,20 +665,25 @@ progress::-webkit-progress-value {
 .scroll-top-btn-icon {
   display: block;
   position: relative;
-  top: 4px;
-  left: 4px;
+  top: 5px;
+  left: 5px;
   width: 30px;
   height: 30px;
 }
 
 @media (max-width: 900px) {
-  #about, #skills, #certificates, #works, #contacts {
+  #about,
+  #skills,
+  #certificates,
+  #works,
+  #contacts {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .title-side, .content-side {
+  .title-side,
+  .content-side {
     width: 100%;
     max-height: auto;
   }
