@@ -322,7 +322,7 @@ progress::-webkit-progress-value {
 }
 
 .certificate {
-  max-width: 595px;
+  max-width: 100%;
   margin: 30px 15px;
   border-radius: 5px;
   color: #030f0f;
