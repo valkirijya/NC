@@ -460,6 +460,8 @@ progress::-webkit-progress-value {
   width: 100%;
   height: 100%;
   left: -300px;
+  -webkit-filter: saturate(203%) invert(224%);
+          filter: saturate(203%) invert(224%);
 }
 
 .contacts__header::before {
@@ -498,14 +500,14 @@ progress::-webkit-progress-value {
 .contact-email label,
 .contact-message label,
 .submit label {
-  padding: 0 1rem 1rem;
   display: inline-block;
+  padding: 0 1rem 0 0;
 }
 
 #name,
 #email {
   height: 3vw;
-  width: 18vw;
+  width: 20vw;
   font-size: 0.9em;
   border-radius: 5px;
   border: 1px solid #666565;
@@ -522,7 +524,7 @@ progress::-webkit-progress-value {
 
 #message {
   height: 10vw;
-  width: 40vw;
+  width: 20vw;
   text-align: left;
   font-size: 0.9em;
   padding: 0.5rem;
@@ -566,7 +568,7 @@ progress::-webkit-progress-value {
 .footer {
   min-height: 60px;
   margin: 0;
-  background-color: #15314d;
+  background-color: #132850;
   -webkit-box-shadow: 3px 3px 5px rgba(29, 29, 29, 0.596);
           box-shadow: 3px 3px 5px rgba(29, 29, 29, 0.596);
   display: -webkit-box;
