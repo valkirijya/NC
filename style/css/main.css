@@ -67,12 +67,12 @@ ul {
 #about,
 #skills,
 #certificates,
-#works,
-#contacts {
+#works {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 4rem;
+  margin: 0 auto 4rem;
+  max-width: 1444px;
 }
 
 .header {
@@ -480,8 +480,18 @@ progress::-webkit-progress-value {
 }
 
 #contacts {
-  margin: 0;
+  margin: 0 auto;
   position: relative;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-width: 1444px;
+  margin: 0 auto;
 }
 
 .contacts__background {
@@ -496,7 +506,7 @@ progress::-webkit-progress-value {
 
 .contacts__background_box {
   width: 107%;
-  height: 102%;
+  height: 103%;
   position: absolute;
   left: -254px;
 }
@@ -556,8 +566,8 @@ progress::-webkit-progress-value {
 
 #name,
 #email {
-  height: 3vw;
-  width: 23vw;
+  max-height: 3vw;
+  max-width: 23vw;
   font-size: 0.9em;
   border-radius: 5px;
   border: 1px solid #666565;
@@ -575,8 +585,8 @@ progress::-webkit-progress-value {
 }
 
 #message {
-  height: 10vw;
-  width: 23vw;
+  max-height: 10vw;
+  max-width: 23vw;
   text-align: left;
   font-size: 0.9em;
   padding: 0.5rem;
@@ -604,8 +614,8 @@ progress::-webkit-progress-value {
 }
 
 #submit {
-  height: 50px;
-  width: 150px;
+  max-height: 50px;
+  max-width: 150px;
   font-size: 0.9em;
   cursor: pointer;
   border-radius: 5px;
@@ -627,11 +637,6 @@ progress::-webkit-progress-value {
   background-color: #132850;
   -webkit-box-shadow: 3px 3px 5px rgba(29, 29, 29, 0.596);
           box-shadow: 3px 3px 5px rgba(29, 29, 29, 0.596);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   font-size: 1.3rem;
   color: white;
   z-index: 10;
@@ -640,7 +645,7 @@ progress::-webkit-progress-value {
 .rights,
 .author,
 .connection {
-  width: 33.33%;
+  max-width: 33.33%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
