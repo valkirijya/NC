@@ -101,6 +101,7 @@ ul {
     left: 0;
   }
 }
+
 .box {
   display: flex;
   position: relative;
@@ -128,12 +129,6 @@ ul {
   border-radius: 10px;
   background-color: rgba(99, 98, 98, 0.445);
   transition: all 0.5s;
-  &:hover {
-    visibility: visible;
-  }
-}
-.visible {
-  visibility: visible;
 }
 @keyframes slide-in {
   0% {
@@ -504,7 +499,7 @@ progress::-webkit-progress-value {
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   &:hover {
-    transform: scale(3) translateY(-30px) translateX(-17px);
+    transform: scale(2.5) translateY(-30px) translateX(-17px);
   }
   & img {
     width: 100%;
@@ -522,52 +517,71 @@ progress::-webkit-progress-value {
     color: white;
   }
 }
-
-//////////////////////Scroll to top////////////////////////
-.scroll {
-  border-radius: 50%;
+///////////////////////Mini navigation/////////////////////
+.burger {
+  bottom: 57px;
 }
-@keyframes opacity-in{
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes opacity-out{
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-.scroll-top-btn {
+.mini-navigation {
   position: fixed;
   right: 10px;
-  bottom: 11px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   box-shadow: 1px 1px 8px 1px rgb(121, 120, 120);
   background-color: rgba(219, 218, 218, 0.541);
+  text-align: center;
+  line-height: 40px;
   z-index: 5;
   transition: all 0.5s;
+  color: rgb(78, 77, 77);
   &:hover {
     box-shadow: 3px 3px 12px 2px rgb(68, 68, 68);
   }
 }
-.scroll-top-btn-icon {
-  display: block;
-  position: relative;
-  top: 5px;
-  left: 5px;
-  width: 30px;
-  height: 30px;
+.fa-bars {
+  font-size: 1.4em !important;
+}
+.mini-navigation-menu {
+  position: fixed;
+  right: 60px;
+  bottom: 5px;
+  border-radius: 10px;
+  background-color: rgba(99, 98, 98, 0.747);
+  transition: all 0.5s;
+  z-index: 10;
+  visibility: hidden;
+}
+.visible {
+  visibility: visible;
 }
 
-///////////////////Adaptive////////////////////////////////
+//////////////////////Scroll to top////////////////////////
+.scroll-top-btn {
+  bottom: 11px;
+}
+.fa-angle-up {
+  font-size: 2.4em !important;
+  top: -2px;
+  position: relative;
+}
+@keyframes opacity-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacity-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+///////////////////Adaptability////////////////////////////////
 @media (max-width: 900px) {
   #about,
   #skills,

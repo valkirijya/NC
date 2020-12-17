@@ -85,7 +85,6 @@ ul {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  position: relative;
 }
 
 .page {
@@ -168,14 +167,6 @@ ul {
   background-color: rgba(99, 98, 98, 0.445);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-}
-
-.navigation:hover {
-  visibility: visible;
-}
-
-.visible {
-  visibility: visible;
 }
 
 @-webkit-keyframes slide-in {
@@ -677,8 +668,8 @@ progress::-webkit-progress-value {
 }
 
 .icon_me:hover {
-  -webkit-transform: scale(3) translateY(-30px) translateX(-17px);
-          transform: scale(3) translateY(-30px) translateX(-17px);
+  -webkit-transform: scale(2.5) translateY(-30px) translateX(-17px);
+          transform: scale(2.5) translateY(-30px) translateX(-17px);
 }
 
 .icon_me img {
@@ -702,8 +693,60 @@ progress::-webkit-progress-value {
   color: white;
 }
 
-.scroll {
+.burger {
+  bottom: 57px;
+}
+
+.mini-navigation {
+  position: fixed;
+  right: 10px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+  -webkit-box-shadow: 1px 1px 8px 1px #797878;
+          box-shadow: 1px 1px 8px 1px #797878;
+  background-color: rgba(219, 218, 218, 0.541);
+  text-align: center;
+  line-height: 40px;
+  z-index: 5;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  color: #4e4d4d;
+}
+
+.mini-navigation:hover {
+  -webkit-box-shadow: 3px 3px 12px 2px #444444;
+          box-shadow: 3px 3px 12px 2px #444444;
+}
+
+.fa-bars {
+  font-size: 1.4em !important;
+}
+
+.mini-navigation-menu {
+  position: fixed;
+  right: 60px;
+  bottom: 5px;
+  border-radius: 10px;
+  background-color: rgba(99, 98, 98, 0.747);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 10;
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.scroll-top-btn {
+  bottom: 11px;
+}
+
+.fa-angle-up {
+  font-size: 2.4em !important;
+  top: -2px;
+  position: relative;
 }
 
 @-webkit-keyframes opacity-in {
@@ -740,35 +783,6 @@ progress::-webkit-progress-value {
   100% {
     opacity: 0;
   }
-}
-
-.scroll-top-btn {
-  position: fixed;
-  right: 10px;
-  bottom: 11px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  -webkit-box-shadow: 1px 1px 8px 1px #797878;
-          box-shadow: 1px 1px 8px 1px #797878;
-  background-color: rgba(219, 218, 218, 0.541);
-  z-index: 5;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.scroll-top-btn:hover {
-  -webkit-box-shadow: 3px 3px 12px 2px #444444;
-          box-shadow: 3px 3px 12px 2px #444444;
-}
-
-.scroll-top-btn-icon {
-  display: block;
-  position: relative;
-  top: 5px;
-  left: 5px;
-  width: 30px;
-  height: 30px;
 }
 
 @media (max-width: 900px) {
