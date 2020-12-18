@@ -76,7 +76,6 @@ ul {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  // position: relative;
 }
 .page {
   position: absolute;
@@ -101,7 +100,6 @@ ul {
     left: 0;
   }
 }
-
 .box {
   display: flex;
   position: relative;
@@ -532,7 +530,7 @@ progress::-webkit-progress-value {
   text-align: center;
   line-height: 40px;
   z-index: 5;
-  transition: all 0.5s;
+  transition: all 0.1s;
   color: rgb(78, 77, 77);
   &:hover {
     box-shadow: 3px 3px 12px 2px rgb(68, 68, 68);
@@ -550,6 +548,23 @@ progress::-webkit-progress-value {
   transition: all 0.5s;
   z-index: 10;
   visibility: hidden;
+  transition: all 0.5s;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 .visible {
   visibility: visible;

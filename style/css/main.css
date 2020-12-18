@@ -709,8 +709,8 @@ progress::-webkit-progress-value {
   text-align: center;
   line-height: 40px;
   z-index: 5;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
   color: #4e4d4d;
 }
 
@@ -733,6 +733,43 @@ progress::-webkit-progress-value {
   transition: all 0.5s;
   z-index: 10;
   visibility: hidden;
+  transition: all 0.5s;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .visible {

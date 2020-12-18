@@ -4,6 +4,11 @@ console.log(btn);
 
 const menuOpener = () => {
   miniMenu.classList.toggle("visible");
+  if(miniMenu.classList.contains("visible")){
+    miniMenu.style.animation = "fade-in 1 1s";
+  } else {
+    miniMenu.style.animation = "fade-out 1 1s";
+  }
 };
 btn[0].addEventListener("click", menuOpener);
 miniMenu.addEventListener("click", menuOpener);
