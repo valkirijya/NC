@@ -1,0 +1,34 @@
+[
+  {
+    "src": "img/sertificates/codifan_advanced_front-end.png",
+    "alt": "Certificate EdEra"
+  },
+  {
+    "src": "img/sertificates/soloLearn_js.png",
+    "alt": "Certificate SoloLearn"
+  },
+  {
+    "src": "img/sertificates/google_analitics.png",
+    "alt": "Certificate Google Analitics"
+  },
+  {
+    "src": "img/sertificates/soloLearn_html.png",
+    "alt": "Certificate SoloLearn"
+  },
+  {
+    "src": "img/sertificates/sololearn_php.png",
+    "alt": "Certificate SoloLearn"
+  },
+  {
+    "src": "img/sertificates/ed_era_web_dev.png",
+    "alt": "Certificate EdEra"
+  },
+  {
+    "src": "img/sertificates/soloLearn_css.png",
+    "alt": "Certificate SoloLearn"
+  },
+  {
+    "src": "img/sertificates/codifun_digital_skills.png",
+    "alt": "Certificate CodiFan"
+  }
+]
