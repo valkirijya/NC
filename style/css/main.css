@@ -17,7 +17,8 @@ body {
 
 ::-webkit-scrollbar {
   /* chrome based */
-  width: 0px;
+  width: 0;
+  height: 0;
   background: transparent;
 }
 
@@ -338,7 +339,8 @@ progress::-webkit-progress-value {
 }
 
 .certificate {
-  max-width: 100%;
+  display: inline-block;
+  max-width: 200px;
   margin: 30px 15px;
   border-radius: 5px;
   color: #030f0f;
@@ -353,6 +355,7 @@ progress::-webkit-progress-value {
 }
 
 .certificate__img {
+  max-width: 100%;
   overflow: hidden;
   border-radius: 5px;
 }

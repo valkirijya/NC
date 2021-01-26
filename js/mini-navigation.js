@@ -1,6 +1,5 @@
 let btn = document.querySelectorAll(".mini-navigation");
 let miniMenu = document.querySelector(".mini-navigation-menu");
-console.log(btn);
 
 const menuOpener = () => {
   miniMenu.classList.toggle("visible");
