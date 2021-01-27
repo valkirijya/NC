@@ -1,3 +1,5 @@
+"use strict";
+
 let mainFild = document.querySelector(".galary");
 let url =
   "https://valkirijya.github.io/Nj_Sd/img/sertificates/sertificates.json";
@@ -35,7 +37,6 @@ if (540 < width) {
 fetch(url)
   .then((res) => res.json())
   .then((out) => {
-    console.log("Checkout this JSON! ", out);
     let outData = out;
     for (let i = 0; i < 20; i++) {
       let div = document.createElement("div");
@@ -49,20 +50,30 @@ fetch(url)
       description.innerText = `${outData[i].alt}`;
 
       if (i % 2 == 0) {
-        div.style.transform = `rotate(${Math.round(Math.random() * 10)/2}deg)`;
+        div.style.transform = `rotate(${
+          Math.round(Math.random() * 10) / 2
+        }deg)`;
       } else {
-        div.style.transform = `rotate(-${Math.round(Math.random() * 10)/2}deg)`;
+        div.style.transform = `rotate(-${
+          Math.round(Math.random() * 10) / 2
+        }deg)`;
       }
+
       div.appendChild(certificate);
       div.appendChild(description);
-      let row = document.querySelector(".certificates__img");
+      let row = document.querySelector(".certificates__grid");
       row.appendChild(div);
     }
+
+    console.log("worcks!");
     let img = document.querySelectorAll(".certificate");
+    console.log(img);
     for (let i = 0; i < img.length; i++) {
       img[i].addEventListener("mousedown", setOver);
       function setOver() {
-        img[i].style = `transform: scale(${scale}); z-index: 20; transition: 0.5s;`;
+        img[
+          i
+        ].style = `transform: scale(${scale}); z-index: 20; transition: 0.5s;`;
         img[i].addEventListener("mouseup", setOut);
         function setOut() {
           if (i % 2 == 0) {

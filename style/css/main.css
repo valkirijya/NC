@@ -338,10 +338,25 @@ progress::-webkit-progress-value {
   border-top-right-radius: 65%;
 }
 
+.certificates__grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .certificate {
-  display: inline-block;
-  max-width: 200px;
-  margin: 30px 15px;
+  position: relative;
+  max-width: 44%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  margin: 1rem;
   border-radius: 5px;
   color: #030f0f;
   font-size: 1.3rem;
@@ -354,15 +369,26 @@ progress::-webkit-progress-value {
           box-shadow: 3px 3px 10px 0px #414040;
 }
 
+.certificate:hover .description {
+  visibility: visible;
+}
+
 .certificate__img {
   max-width: 100%;
-  overflow: hidden;
   border-radius: 5px;
 }
 
-.certificate__img img {
-  margin-bottom: -5px;
+.description {
+  position: absolute;
+  visibility: hidden;
   width: 100%;
+  margin: 0;
+  padding: 0.5rem;
+  bottom: 0;
+  text-align: center;
+  background: rgba(220, 220, 220, 0.753);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .works__header {
