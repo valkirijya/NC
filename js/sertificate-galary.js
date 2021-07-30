@@ -1,17 +1,19 @@
-"use strict";
-
 let url =
   "https://valkirijya.github.io/Nj_Sd/img/sertificates/sertificates.json";
-let mainFild = document.querySelector(".galary");
 let btnLeft = document.querySelector(".left-btn");
 let btnRight = document.querySelector(".right-btn");
+let row = document.querySelector(".certificates__grid");
+let galary = document.querySelector(".certificate__galary");
+let galaryFild = document.querySelector(".certificate__galary_fild");
+let closeBtn = document.querySelector(".close-btn");
 let current = 0;
 
 fetch(url)
   .then((res) => res.json())
   .then((out) => {
+    console.log("Checkout this JSON! ", out);
     let outData = out;
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < outData.length; i++) {
       let div = document.createElement("div");
       div.className = "certificate";
       let certificate = document.createElement("img");
@@ -31,30 +33,53 @@ fetch(url)
           Math.round(Math.random() * 10) / 2
         }deg)`;
       }
-      div.appendChild(certificate);
-      div.appendChild(description);
-      let row = document.querySelector(".certificates__grid");
-      row.appendChild(div);
-    }
-    
-    let mas = document.querySelectorAll(".certificate__img");
-    const scalingCertificates = () => {
-      const stepRight = () => {
-        let foto = document.querySelector(".certificate__galary_img");
-        if (current < mas.length - 1) current++;
-        else current = 0;
-        foto.src = mas[current];
-      };
-      btnRight.addEventListener("click", stepRight);
+      div.append(certificate);
+      div.append(description);
+      row.append(div);
 
-      const stepLeft = () => {
-        let foto = document.querySelector(".certificate__galary_img");
-        if (current > 0) current--;
-        else current = mas.length - 1;
-        foto.src = mas[current];
-      };
-      btnLeft.addEventListener("click", stepLeft);
+      let galaryDiv = document.createElement("div");
+      galaryDiv.className = "certificate";
+      galaryDiv.append(certificate);
+      galaryDiv.append(description);
+      galaryFild.append(galaryDiv);
+    }
+
+    let certificates = row.querySelectorAll(".certificate");
+    let galaryCertificates = galaryFild.querySelectorAll(".certificate");
+    console.log(certificates);
+    
+    console.log(galaryCertificates);
+    
+    for (let i = 0; i < certificates.length; i++) {
+      galaryCertificates[i].hidden = true;
+      certificates[i].addEventListener("click", () => {
+        galary.hidden = false;
+        galaryCertificates[i].hidden = false;
+        galaryCertificates[i].classList.add("scaled-certificate");
+      });
+    }
+
+    closeBtn.addEventListener("click", () => {
+      galary.hidden = true;
+    });
+
+    const stepRight = () => {
+      let foto = document.querySelector(".scaled-certificate");
+      if (current < galaryCertificates.length - 1) current++;
+      else current = 0;
+      galaryCertificates[current].hidden = false;
+      galaryCertificates[current - 1].hidden = true;
     };
+    btnRight.addEventListener("click", stepRight);
+
+    const stepLeft = () => {
+      let foto = document.querySelector(".scaled-certificate");
+      if (current > 0) current--;
+      else current = galaryCertificates.length - 1;
+      galaryCertificates[current].hidden = false;
+      galaryCertificates[current + 1].hidden = true;
+    };
+    btnLeft.addEventListener("click", stepLeft);
   })
   .catch((err) => {
     throw err;
