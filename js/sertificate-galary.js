@@ -39,17 +39,24 @@ fetch(url)
 
       let galaryDiv = document.createElement("div");
       galaryDiv.className = "certificate";
-      galaryDiv.append(certificate);
-      galaryDiv.append(description);
+      let certificateGalary = document.createElement("img");
+      certificateGalary.className = "certificate__img";
+      certificateGalary.setAttribute("src", `${outData[i].src}`);
+      certificateGalary.setAttribute("alt", `${outData[i].alt}`);
+      let descriptionGalary = document.createElement("p");
+      descriptionGalary.className = "description";
+      descriptionGalary.innerText = `${outData[i].alt}`;
+      galaryDiv.append(certificateGalary);
+      galaryDiv.append(descriptionGalary);
       galaryFild.append(galaryDiv);
     }
 
     let certificates = row.querySelectorAll(".certificate");
     let galaryCertificates = galaryFild.querySelectorAll(".certificate");
     console.log(certificates);
-    
+
     console.log(galaryCertificates);
-    
+
     for (let i = 0; i < certificates.length; i++) {
       galaryCertificates[i].hidden = true;
       certificates[i].addEventListener("click", () => {
