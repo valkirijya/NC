@@ -252,16 +252,15 @@ progress::-webkit-progress-value {
 }
 .certificate__galary {
   position: absolute;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  
   z-index: 20;
-}
-.certificate__galary_fild {
-  position: relative;
-  height: 100%;
   background-color: rgba(92, 90, 90, 0.678);
 }
 .certificate {
@@ -305,23 +304,22 @@ progress::-webkit-progress-value {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-.scaled-certificate {
-  margin: 1rem auto;
-  justify-content: center;
-  align-items: center;
-  vertical-align: middle;
-  transform: rotate(0deg)!important;
+.galary-certificate {
+  max-width: 85%;
+  height: auto;
+  margin: 0 auto;
+  padding: 1rem;
   z-index: 50;
 }
 .right-btn,
 .left-btn {
   top: calc(50% - 20px);
   &.mini-navigation {
-    position: absolute!important;
+    position: absolute !important;
   }
 }
 .right-btn {
-  right: 20px!important;
+  right: 20px !important;
   transform: rotate(90deg);
 }
 .left-btn {
@@ -329,14 +327,17 @@ progress::-webkit-progress-value {
   transform: rotate(-90deg);
 }
 .close-btn {
-  position: absolute!important;
+  position: absolute !important;
   top: 1rem;
   right: 1rem;
+  .fa-angle-up{
+    top: 3px;
+  }
 }
-.fa-times-circle-o {
+.fa-angle-down {
   font-size: 2.4em !important;
-  // top: -2px;
-  position: relative;
+  top: -5px;
+  position: absolute;
 }
 //////////////////////////Works////////////////////////////
 .works__header {
@@ -625,7 +626,7 @@ progress::-webkit-progress-value {
   border-radius: 10px;
   background-color: rgba(99, 98, 98, 0.747);
   transition: all 0.5s;
-  z-index: 10;
+  z-index: 100;
   visibility: hidden;
   transition: all 0.5s;
 }
@@ -657,22 +658,6 @@ progress::-webkit-progress-value {
   font-size: 2.4em !important;
   top: -2px;
   position: relative;
-}
-@keyframes opacity-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes opacity-out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 
 ///////////////////Adaptability////////////////////////////////

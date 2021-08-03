@@ -19,10 +19,10 @@ function scrollChecking() {
   for (i = 0; i < navigationButtons.length; i++) {
     if (document.documentElement.clientHeight / 3 < window.pageYOffset) {
       navigationButtons[i].style.visibility = "visible";
-      navigationButtons[i].style.animation = "opacity-in 1 .6s";
+      navigationButtons[i].style.animation = "fade-in 1 .6s";
     } else {
       navigationButtons[i].style.visibility = "hidden";
-      navigationButtons[i].style.animation = "opacity-out 1 .6s";
+      navigationButtons[i].style.animation = "fade-out 1 .6s";
     }
   }
 }
