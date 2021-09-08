@@ -37,11 +37,12 @@ fetch(url)
 
       let galaryDiv = document.createElement("div");
       galaryDiv.className = "galary-certificate";
-      galaryDiv.setAttribute('hidden', 'true');
+      galaryDiv.setAttribute("hidden", "true");
       let certificateGalary = document.createElement("img");
       certificateGalary.className = "certificate__img";
       certificateGalary.setAttribute("src", `${outData[i].src}`);
       certificateGalary.setAttribute("alt", `${outData[i].alt}`);
+
       galaryDiv.append(certificateGalary);
       galary.append(galaryDiv);
     }
