@@ -352,28 +352,61 @@ progress::-webkit-progress-value {
   /* Chrome */
 }
 
+#certificates {
+  position: relative;
+}
+
 .certificates__header {
   background-image: url("../../img/skaly_vecher_serye.jpg");
   z-index: 5;
 }
 
-#certificates {
-  position: relative;
-}
-
-.certificates__grid {
+.row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 1rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0 1rem;
+  overflow: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  /* IE 10+ */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
-.works__grid {
+.row::-webkit-scrollbar {
+  /* chrome based */
+  width: 0px;
+  background: transparent;
+}
+
+.row.content-side::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(transparent));
+  background: linear-gradient(white, transparent);
+  z-index: 1;
+}
+
+.row.content-side::after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 3rem;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(white));
+  background: linear-gradient(transparent, white);
+  z-index: 1;
+}
+
+.certificates__grid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -524,49 +557,6 @@ progress::-webkit-progress-value {
 .works__header {
   background-image: url("../../img/gory_les_sumerki.jpg");
   z-index: 5;
-}
-
-.row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 0 1rem;
-  overflow: scroll;
-  overflow-x: hidden;
-  -ms-overflow-style: none;
-  /* IE 10+ */
-  scrollbar-width: none;
-  /* Firefox */
-}
-
-.row::-webkit-scrollbar {
-  /* chrome based */
-  width: 0px;
-  background: transparent;
-}
-
-.row.content-side::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 3rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), to(transparent));
-  background: linear-gradient(white, transparent);
-  z-index: 1;
-}
-
-.row.content-side::after {
-  content: " ";
-  position: absolute;
-  width: 100%;
-  height: 3rem;
-  bottom: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(white));
-  background: linear-gradient(transparent, white);
-  z-index: 1;
 }
 
 .column {
@@ -961,6 +951,12 @@ progress::-webkit-progress-value {
   }
 }
 
+@media (max-width: 1010px) {
+  .certificate {
+    max-width: none;
+  }
+}
+
 @media (max-width: 900px) {
   #about,
   #skills,
@@ -982,6 +978,9 @@ progress::-webkit-progress-value {
   .left-header,
   .right-header {
     margin: 0;
+  }
+  .certificate {
+    max-width: 44%;
   }
   #contacts .container {
     -webkit-box-orient: vertical;
@@ -1029,6 +1028,12 @@ progress::-webkit-progress-value {
 }
 
 @media (max-width: 600px) {
+  .column {
+    max-width: 100%;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
   .certificate {
     max-width: none;
   }
