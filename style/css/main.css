@@ -373,6 +373,18 @@ progress::-webkit-progress-value {
           justify-content: center;
 }
 
+.works__grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .certificate__galary {
   position: absolute;
   visibility: hidden;
@@ -503,6 +515,10 @@ progress::-webkit-progress-value {
   font-size: 2.4em !important;
   top: -5px;
   position: absolute;
+}
+
+#works {
+  position: relative;
 }
 
 .works__header {

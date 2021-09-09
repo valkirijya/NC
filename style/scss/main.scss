@@ -228,6 +228,24 @@ progress {
   background: #eee;
   border-radius: 10px;
   color: rgb(177, 172, 177); /* IE10 */
+  // &[data-descr]{
+  //   position: relative;
+  //   cursor: help;
+  // }
+  // &[data-descr]:hover::after {
+  //   content: attr(data-descr);
+  //   position: absolute;
+  //   left: 0;
+  //   top: 24px;
+  //   min-width: 200px;
+  //   border: 1px #aaaaaa solid;
+  //   border-radius: 10px;
+  //   background-color: #ffffcc;
+  //   padding: 12px;
+  //   color: #000000;
+  //   font-size: 14px;
+  //   z-index: 1;
+  // }
 }
 progress::-webkit-progress-bar {
   background: #eee;
@@ -251,6 +269,12 @@ progress::-webkit-progress-value {
   position: relative;
 }
 .certificates__grid {
+  display: flex;
+  margin: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.works__grid {
   display: flex;
   margin: 1rem;
   flex-wrap: wrap;
@@ -349,6 +373,9 @@ progress::-webkit-progress-value {
   position: absolute;
 }
 //////////////////////////Works////////////////////////////
+#works{
+  position: relative;
+}
 .works__header {
   background-image: url("../../img/gory_les_sumerki.jpg");
   z-index: 5;
