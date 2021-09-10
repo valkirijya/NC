@@ -134,7 +134,6 @@ ul {
   }
 }
 .navigation {
-  visibility: hidden;
   position: absolute;
   left: -3.5rem;
   height: 98.5%;
@@ -652,7 +651,6 @@ progress::-webkit-progress-value {
   background-color: rgba(99, 98, 98, 0.747);
   transition: all 0.5s;
   z-index: 100;
-  visibility: hidden;
   transition: all 0.5s;
 }
 @keyframes fade-in {
@@ -671,13 +669,11 @@ progress::-webkit-progress-value {
     opacity: 0;
   }
 }
-.visible {
-  visibility: visible;
-}
 
 //////////////////////Scroll to top////////////////////////
 .scroll-top-btn {
   bottom: 11px;
+  cursor: pointer;
 }
 .fa-angle-up {
   font-size: 2.4em !important;
@@ -735,7 +731,7 @@ progress::-webkit-progress-value {
   .certificate {
     max-width: 44%;
   }
-  .certificate__galary{
+  .certificate__galary {
     top: 500px;
     height: calc(100% - 500px);
   }
@@ -790,7 +786,7 @@ progress::-webkit-progress-value {
   .certificate {
     max-width: none;
   }
-  .certificate__galary{
+  .certificate__galary {
     display: none;
   }
 }

@@ -182,7 +182,6 @@ ul {
 }
 
 .navigation {
-  visibility: hidden;
   position: absolute;
   left: -3.5rem;
   height: 98.5%;
@@ -876,7 +875,6 @@ progress::-webkit-progress-value {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   z-index: 100;
-  visibility: hidden;
   transition: all 0.5s;
 }
 
@@ -916,12 +914,9 @@ progress::-webkit-progress-value {
   }
 }
 
-.visible {
-  visibility: visible;
-}
-
 .scroll-top-btn {
   bottom: 11px;
+  cursor: pointer;
 }
 
 .fa-angle-up {
