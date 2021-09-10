@@ -982,6 +982,10 @@ progress::-webkit-progress-value {
   .certificate {
     max-width: 44%;
   }
+  .certificate__galary {
+    top: 500px;
+    height: calc(100% - 500px);
+  }
   #contacts .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1036,6 +1040,9 @@ progress::-webkit-progress-value {
   }
   .certificate {
     max-width: none;
+  }
+  .certificate__galary {
+    display: none;
   }
 }
 
