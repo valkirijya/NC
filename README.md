@@ -1,2 +1,2 @@
-# NS_WD
+# NJSD
 Personal website https://valkirijya.github.io/Nj_Sd/

@@ -135,6 +135,7 @@ ul {
 }
 .navigation {
   position: absolute;
+  visibility: hidden;
   left: -3.5rem;
   height: 98.5%;
   border-radius: 10px;
@@ -190,7 +191,6 @@ ul {
 .about__content {
   display: flex;
   &_text {
-    // width: 70%;
     font-size: 1.5rem;
     padding: 4rem;
   }
@@ -198,6 +198,27 @@ ul {
 blockquote {
   text-align: right;
   font-style: italic;
+}
+.avatar {
+  position: relative;
+  .icon_me {
+    visibility: hidden;
+    position: absolute;
+    top:-120%;
+    right: -120%;
+    transition: all 0.5s;
+    animation: fade-out 1s 1;
+  }
+  &:hover {
+    cursor: pointer;
+    & .icon_me {
+      animation: fade-in 1s 1;
+      visibility: visible;
+      &:hover {
+        transform: scale(2.5) translateY(-30px) translateX(20px);
+      }
+    }
+  }
 }
 //////////////////////////Skills///////////////////////////////
 .skills__header {

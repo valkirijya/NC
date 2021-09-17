@@ -183,6 +183,7 @@ ul {
 
 .navigation {
   position: absolute;
+  visibility: hidden;
   left: -3.5rem;
   height: 98.5%;
   border-radius: 10px;
@@ -293,6 +294,36 @@ ul {
 blockquote {
   text-align: right;
   font-style: italic;
+}
+
+.avatar {
+  position: relative;
+}
+
+.avatar .icon_me {
+  visibility: hidden;
+  position: absolute;
+  top: -120%;
+  right: -120%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-animation: fade-out 1s 1;
+          animation: fade-out 1s 1;
+}
+
+.avatar:hover {
+  cursor: pointer;
+}
+
+.avatar:hover .icon_me {
+  -webkit-animation: fade-in 1s 1;
+          animation: fade-in 1s 1;
+  visibility: visible;
+}
+
+.avatar:hover .icon_me:hover {
+  -webkit-transform: scale(2.5) translateY(-30px) translateX(20px);
+          transform: scale(2.5) translateY(-30px) translateX(20px);
 }
 
 .skills__header {
