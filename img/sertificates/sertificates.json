@@ -1,34 +1,38 @@
 [
   {
-    "src": "img/sertificates/codifan_advanced_front-end.png",
-    "alt": "Certificate EdEra"
+    "src": "img/sertificates/codifan_advanced_front-end.jpg",
+    "alt": "EdEra Certificate"
   },
   {
-    "src": "img/sertificates/soloLearn_js.png",
-    "alt": "Certificate SoloLearn"
+    "src": "img/sertificates/soloLearn_js.jpg",
+    "alt": "SoloLearn Certificate"
   },
   {
-    "src": "img/sertificates/google_analitics.png",
-    "alt": "Certificate Google Analitics"
+    "src": "img/sertificates/google_analitics.jpg",
+    "alt": "Google Analitics Certificate"
   },
   {
-    "src": "img/sertificates/soloLearn_html.png",
-    "alt": "Certificate SoloLearn"
+    "src": "img/sertificates/soloLearn_html.jpg",
+    "alt": "SoloLearn Certificate"
   },
   {
-    "src": "img/sertificates/sololearn_php.png",
-    "alt": "Certificate SoloLearn"
+    "src": "img/sertificates/sololearn_php.jpg",
+    "alt": "SoloLearn Certificate"
   },
   {
-    "src": "img/sertificates/ed_era_web_dev.png",
-    "alt": "Certificate EdEra"
+    "src": "img/sertificates/ed_era_web_dev.jpg",
+    "alt": "EdEra Certificate"
   },
   {
-    "src": "img/sertificates/soloLearn_css.png",
-    "alt": "Certificate SoloLearn"
+    "src": "img/sertificates/soloLearn_css.jpg",
+    "alt": "SoloLearn Certificate"
   },
   {
-    "src": "img/sertificates/codifun_digital_skills.png",
-    "alt": "Certificate CodiFan"
+    "src": "img/sertificates/codifun_digital_skills.jpg",
+    "alt": "CodiFan Certificate"
+  },
+  {
+    "src": "img/sertificates/cyber_school_web_application_cyber_security_basics.png",
+    "alt": "Cyber School Certificate"
   }
 ]
