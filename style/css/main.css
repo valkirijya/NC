@@ -471,6 +471,7 @@ progress::-webkit-progress-value {
 .certificate {
   position: relative;
   max-width: 44%;
+  max-height: 200px;
   margin: 1rem;
   border-radius: 5px;
   color: #030f0f;
