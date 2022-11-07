@@ -34,5 +34,9 @@
   {
     "src": "img/sertificates/cyber_school_web_application_cyber_security_basics.jpg",
     "alt": "Cyber School Certificate"
+  },
+  {
+    "src": "img/sertificates/powercode_academy-frontend_advanced.jpg",
+    "alt": "Powercode Academy Certificate"
   }
 ]
