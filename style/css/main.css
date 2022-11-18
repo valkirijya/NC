@@ -48,6 +48,13 @@ ul {
   width: 40%;
   max-height: 650px;
   background-size: cover;
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.596);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.596);
+}
+
+.title-side.contacts__header {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .title-side h2 {
@@ -73,7 +80,7 @@ ul {
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto 4rem;
-  max-width: 1444px;
+  max-width: 1920px;
 }
 
 .right-position {
@@ -101,13 +108,8 @@ ul {
 .header {
   overflow: hidden;
   min-height: 100%;
-}
-
-.ibg {
-  background-image: url("../../img/volny_riab_voda.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.596);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.596);
 }
 
 .page {
@@ -147,6 +149,13 @@ ul {
   height: 100%;
   top: 0;
   left: 0;
+}
+
+.main-screen__bg.ibg {
+  background-image: url("../../img/volny_riab_voda.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .box {
@@ -443,9 +452,16 @@ progress::-webkit-progress-value {
   margin: 1rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-height: 1800px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-column-count: 2;
+          column-count: 2;
 }
 
 .certificate__galary {
@@ -471,7 +487,6 @@ progress::-webkit-progress-value {
 .certificate {
   position: relative;
   max-width: 44%;
-  max-height: 200px;
   margin: 1rem;
   border-radius: 5px;
   color: #030f0f;

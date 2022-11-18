@@ -3,7 +3,12 @@ $border: 1px solid rgb(102, 101, 101);
 $b-shadow: 3px 3px 5px rgba(29, 29, 29, 0.596);
 $b-shadow-dark: 10px 10px 10px rgba(0, 0, 0, 0.596);
 $t-shadow: 2px 2px 5px rgb(31, 30, 30);
-$l-gradient: linear-gradient(to right, rgb(34, 250, 239), rgb(49, 49, 221), rgb(140, 20, 187));
+$l-gradient: linear-gradient(
+  to right,
+  rgb(34, 250, 239),
+  rgb(49, 49, 221),
+  rgb(140, 20, 187)
+);
 
 ///////////////////Main settings/////////////////////////////
 * {
@@ -44,6 +49,10 @@ ul {
   width: 40%;
   max-height: 650px;
   background-size: cover;
+  box-shadow: $b-shadow-dark;
+  &.contacts__header {
+    box-shadow: none;
+  }
   h2 {
     position: absolute;
     width: 100%;
@@ -64,7 +73,7 @@ ul {
 #works {
   display: flex;
   margin: 0 auto 4rem;
-  max-width: 1444px;
+  max-width: 1920px;
 }
 .right-position {
   display: flex;
@@ -84,12 +93,7 @@ ul {
 .header {
   overflow: hidden;
   min-height: 100%;
-}
-.ibg {
-  background-image: url("../../img/volny_riab_voda.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  box-shadow: $b-shadow-dark;
 }
 .page {
   position: absolute;
@@ -112,6 +116,12 @@ ul {
     height: 100%;
     top: 0;
     left: 0;
+    &.ibg {
+      background-image: url("../../img/volny_riab_voda.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
   }
 }
 .box {
@@ -204,7 +214,7 @@ blockquote {
   .icon_me {
     visibility: hidden;
     position: absolute;
-    top:-120%;
+    top: -120%;
     right: -120%;
     transition: all 0.5s;
     animation: fade-out 1s 1;
@@ -324,7 +334,10 @@ progress::-webkit-progress-value {
   display: flex;
   margin: 1rem;
   flex-wrap: wrap;
+  flex-direction: column;
+  max-height: 1800px;
   justify-content: center;
+  column-count: 2;
 }
 .certificate__galary {
   position: absolute;
@@ -332,6 +345,7 @@ progress::-webkit-progress-value {
   display: flex;
   justify-content: center;
   align-items: center;
+
   top: 0;
   left: 0;
   width: 100%;
@@ -342,7 +356,6 @@ progress::-webkit-progress-value {
 .certificate {
   position: relative;
   max-width: 44%;
-  max-height: 200px;
   margin: 1rem;
   border-radius: 5px;
   color: rgb(3, 15, 15);
