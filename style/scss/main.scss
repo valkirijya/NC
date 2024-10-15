@@ -334,10 +334,8 @@ progress::-webkit-progress-value {
   display: flex;
   margin: 1rem;
   flex-wrap: wrap;
-  flex-direction: column;
-  max-height: 1800px;
+  flex-direction: row;
   justify-content: center;
-  column-count: 2;
 }
 .certificate__galary {
   position: absolute;

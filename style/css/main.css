@@ -454,14 +454,11 @@ progress::-webkit-progress-value {
       flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  max-height: 1800px;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-column-count: 2;
-          column-count: 2;
 }
 
 .certificate__galary {
