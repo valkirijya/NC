@@ -36,11 +36,11 @@
     "alt": "Cyber School Certificate"
   },
   {
-    "src": "img/certificates/powercode_academy-frontend_advanced.jpg",
-    "alt": "Powercode Academy Certificate"
-  },
-  {
     "src": "img/certificates/coursera_google_cybersecurity.jpg",
     "alt": "Coursera Certificate"
+  },
+  {
+    "src": "img/certificates/powercode_academy-frontend_advanced.jpg",
+    "alt": "Powercode Academy Certificate"
   }
 ]
