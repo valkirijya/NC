@@ -1,5 +1,5 @@
 let url =
-  "https://valkirijya.github.io/Nj_Sd/img/certificates/certificates.json";
+  "https://valkirijya.github.io/NC/img/certificates/certificates.json";
 let btnLeft = document.querySelector(".left-btn");
 let btnRight = document.querySelector(".right-btn");
 let row = document.querySelector(".certificates__grid");
